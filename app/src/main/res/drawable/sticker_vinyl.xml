@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <!-- Background -->
+    <path android:fillColor="#FFDBCA" android:pathData="M0,0h320v180h-320z" />
+    <!-- Packaging Box on Left -->
+    <path android:fillColor="#9C4500" android:pathData="M68,54h84v82h-84z" />
+    <path android:fillColor="#FF7A1B" android:pathData="M68,40l14,-14h56l14,14z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M86,74h48v36h-48z" />
+    <path android:fillColor="#1F4FD8" android:pathData="M94,82h32v8h-32z" />
+    <path android:fillColor="#747686" android:pathData="M94,95h24v5h-24z" />
+    <!-- Die-Cut Round Sticker Badge on Right -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M214,96m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0" />
+    <path
+        android:fillColor="#1F4FD8"
+        android:pathData="M214,96m-36,0a36,36 0,1 1,72 0a36,36 0,1 1,-72 0" />
+    <path android:fillColor="#FF7A1B" android:pathData="M194,82h40v12h-40z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M190,100h48v7h-48z" />
+</vector>

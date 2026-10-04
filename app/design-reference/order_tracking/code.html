@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#131b2e", "surface": "#faf8ff", "surface-container-low": "#f2f3ff", "surface-variant": "#dae2fd", "on-primary-container": "#ccd4ff", "inverse-surface": "#283044", "tertiary-container": "#006c30", "error": "#ba1a1a", "primary-container": "#1f4fd8", "on-secondary": "#ffffff", "surface-container-highest": "#dae2fd", "tertiary": "#005122", "secondary-container": "#ff7a1b", "on-background": "#131b2e", "tertiary-fixed": "#95f8a7", "on-primary-fixed-variant": "#0039b5", "on-primary-fixed": "#001551", "surface-container": "#eaedff", "surface-tint": "#2251da", "inverse-primary": "#b7c4ff", "primary-fixed-dim": "#b7c4ff", "secondary-fixed-dim": "#ffb68e", "on-primary": "#ffffff", "tertiary-fixed-dim": "#79db8d", "surface-container-lowest": "#ffffff", "secondary-fixed": "#ffdbca", "on-surface-variant": "#434655", "error-container": "#ffdad6", "secondary": "#9c4500", "on-error": "#ffffff", "on-secondary-fixed-variant": "#773300", "on-tertiary-container": "#89ec9b", "surface-bright": "#faf8ff", "on-secondary-container": "#5e2700", "outline": "#747686", "primary": "#0037b1", "primary-fixed": "dce1ff", "background": "#faf8ff", "surface-container-high": "#e2e7ff", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#005323", "inverse-on-surface": "#eef0ff", "surface-dim": "#d2d9f4", "outline-variant": "#c4c5d7", "on-secondary-fixed": "#331200", "on-tertiary-fixed": "#00210a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2rem", "gutter": "1rem", "space-lg": "1.5rem", "margin": "1rem" }, fontFamily: { "body-md": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"] }, fontSize: { "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "16px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", fontWeight: "500" }], "headline-lg": ["28px", { lineHeight: "36px", fontWeight: "700" }], "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "500" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }] } } } };</script><style>@layer base { html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container active:bg-surface-container-high transition-colors text-on-surface" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="PrintXpress logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UuVI51mR8aomExe7Q2z06-CK_K2MFhtx_PwOpgHxVK3YxG6AlifjBC7kZw0_1MsrxRWMo9MC2YhDpGNg7meBi3s_74o9fewm5HT5Y_sH0_xVqrrp1lmC5AYaKPqeMgEhqtQbJmt6SuhkoU7Di5-6fWPZRROCpmOgIWdBxy4YNNaKlsvMyNmfgCa_Xv9CvrK_pz6oew6Svrs-BRfvxH3rPX1QEAWODoAH4tWBlT1lNEo-pMovplcBNepQnj"/><h1 class="font-headline-sm text-headline-sm text-on-surface ml-space-xs tracking-tight truncate">Order Tracking</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Refresh" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container active:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[22px]">refresh</span></button><button aria-label="Help and Support" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container active:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[22px]">help_outline</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-xl space-y-space-md">
+<!-- Header Card: Order ID & Live Completion Countdown -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col space-y-space-sm relative overflow-hidden">
+<!-- Ambient subtle print tone gradient glow -->
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/5 rounded-full pointer-events-none blur-2xl"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant">Order ID</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight" id="orderIdText">#PX-12345</span>
+<button aria-label="Copy Order ID" class="p-1 rounded-full text-primary hover:bg-surface-container transition-colors active:scale-90" id="copyOrderBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/15 text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase">Live Status</span>
+</div>
+</div>
+<!-- Toast notification for copy -->
+<div class="hidden transition-all duration-300 transform scale-95 opacity-0 bg-inverse-surface text-inverse-on-surface text-label-sm font-label-sm py-1 px-3 rounded-lg w-max mx-auto" id="copyToast">
+      Order ID copied to clipboard!
+    </div>
+<!-- Prominent Estimated Completion Block -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+          Estimated Ready for Dispatch
+        </span>
+<span class="bg-surface-container px-2 py-0.5 rounded-full text-primary font-label-sm text-label-sm">Step 3 of 5</span>
+</div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+        Tomorrow, 25 Oct <span class="font-headline-sm text-headline-sm text-primary font-semibold">by 4:00 PM</span>
+</div>
+<div class="flex items-center space-x-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span class="font-medium text-tertiary">On schedule</span>
+<span>•</span>
+<span>Prompt Xpress Colombo Hub (Pvt) Ltd</span>
+</div>
+</div>
+</div>
+<!-- Compact Order Summary Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex items-center justify-between gap-space-md">
+<div class="flex items-center space-x-space-md min-w-0">
+<div class="relative w-16 h-16 rounded-lg overflow-hidden bg-surface-container shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Stack of thick premium matte white and textured charcoal business cards with copper foil letterpress detail sitting on a light oak studio desk with coffee cup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZmE0BDAdKRHLdXUKaEwx-KkObfVz8mzevxdJO7Tonytp0bubeGS7c2cMpLtBHqdeUr4UV_r9KhZ-UWTw7_RSTlfG0_6FYybdNdluLxPMc6MupA3gp1gGRmHaiM0XRuAqQ4xr5WMvp2RQ-egWvnFuxd3wgbZ8ootdVooHW64qJH9Xtix5REepeoUXGoGsjochHy0N1nlwqpwWKv0q4KRluNinDeC-yU321M-XfmZoY5LnygMNegiai1w"/>
+<div class="absolute bottom-0 inset-x-0 bg-inverse-surface/60 text-surface-bright text-[9px] font-medium text-center py-0.5 backdrop-blur-xs">
+          350 GSM
+        </div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded">500 pcs</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[13px] mr-0.5">verified</span> Paid
+          </span>
+</div>
+<h2 class="font-label-lg text-label-lg text-on-surface font-semibold truncate mt-0.5">
+          Premium Matte Business Cards
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+          Double-Sided • Spot UV &amp; Foil Stamping
+        </p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Rs. 2,800</span>
+</div>
+</div>
+<!-- Vertical Timeline Stepper Section -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col space-y-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Production Milestones</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Heidelberg Feed</span>
+</div>
+<div class="relative flex flex-col">
+<!-- Stepper Item 1: Completed -->
+<div class="flex items-start group relative pb-space-lg">
+<!-- Connecting Vertical Line -->
+<div class="absolute left-4 top-8 -bottom-1 w-0.5 bg-tertiary"></div>
+<!-- Indicator Circle -->
+<div class="relative z-10 w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center shrink-0 shadow-sm text-on-tertiary">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<!-- Content -->
+<div class="ml-space-md flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Order Placed &amp; Payment Verified</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10:15 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            24 Oct 2024 • Payment of Rs. 2,800 verified via Visa IPG gateway.
+          </p>
+</div>
+</div>
+<!-- Stepper Item 2: Completed -->
+<div class="flex items-start group relative pb-space-lg">
+<!-- Connecting Vertical Line -->
+<div class="absolute left-4 top-8 -bottom-1 w-0.5 bg-primary"></div>
+<!-- Indicator Circle -->
+<div class="relative z-10 w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center shrink-0 shadow-sm text-on-tertiary">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<!-- Content -->
+<div class="ml-space-md flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Pre-press &amp; Digital Proofing</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">11:30 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            24 Oct 2024 • Artwork verified: 300 DPI CMYK, 2mm bleed approved by prepress tech Nimal.
+          </p>
+</div>
+</div>
+<!-- Stepper Item 3: CURRENT ACTIVE STEP -->
+<div class="flex items-start group relative pb-space-lg">
+<!-- Connecting Vertical Line to Pending -->
+<div class="absolute left-4 top-8 -bottom-1 w-0.5 bg-surface-container-high"></div>
+<!-- Pulsing Indicator Circle -->
+<div class="relative z-10 w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center shrink-0 shadow-md text-on-secondary">
+<span class="material-symbols-outlined text-[18px] animate-spin" style="animation-duration: 4s;">print</span>
+<span class="absolute inset-0 rounded-full bg-secondary-container opacity-40 animate-ping"></span>
+</div>
+<!-- Content with Highlighted Card Container -->
+<div class="ml-space-md flex flex-col min-w-0 w-full">
+<div class="bg-surface-container-low rounded-xl p-space-sm space-y-space-xs">
+<div class="flex items-center justify-between flex-wrap gap-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm font-semibold tracking-wide uppercase shadow-xs">
+                In Production Now
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Started Today, 02:45 PM</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">
+              Offset Press Run (Printing)
+            </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Heidelberg Speedmaster 4-color press queue. Sheet run 500/500 impressions with automated ink-density control.
+            </p>
+<!-- Real-time Sheet Counter Visual Bar -->
+<div class="w-full bg-surface-container-highest rounded-full h-2 mt-2 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full transition-all duration-700" style="width: 78%;"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] font-label-sm text-on-surface-variant pt-0.5">
+<span>Plate calibration complete</span>
+<span class="font-semibold text-secondary">390 / 500 Sheets run</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stepper Item 4: Pending -->
+<div class="flex items-start group relative pb-space-lg">
+<!-- Connecting Vertical Line -->
+<div class="absolute left-4 top-8 -bottom-1 w-0.5 bg-surface-container-high"></div>
+<!-- Inactive Indicator Circle -->
+<div class="relative z-10 w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">cut</span>
+</div>
+<!-- Content -->
+<div class="ml-space-md flex flex-col min-w-0 opacity-75">
+<div class="flex items-center justify-between">
+<h4 class="font-label-lg text-label-lg text-on-surface font-medium">Finishing &amp; Packaging</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pending</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Thermal matte lamination, 3mm corner rounding &amp; moisture-proof shrink wrap.
+          </p>
+</div>
+</div>
+<!-- Stepper Item 5: Pending Handover -->
+<div class="flex items-start group relative">
+<!-- Inactive Indicator Circle -->
+<div class="relative z-10 w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<!-- Content -->
+<div class="ml-space-md flex flex-col min-w-0 opacity-75">
+<div class="flex items-center justify-between">
+<h4 class="font-label-lg text-label-lg text-on-surface font-medium">Ready for Courier Handover / Dispatch</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pending</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Prompt Xpress Courier Doorstep delivery to Kollupitiya, Colombo 03.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Help / WhatsApp Courier Contact Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Need urgent delivery revision?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Floor manager available via direct WhatsApp line.</p>
+</div>
+</div>
+</div>
+<a class="w-full h-12 rounded-xl bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-lg text-label-lg flex items-center justify-center space-x-2 transition-transform active:scale-[0.98] shadow-sm" href="https://wa.me/94771234567?text=Hi%20PrintXpress,%20regarding%20my%20Order%20%23PX-12345" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Chat with Production Desk (+94 77 123 4567)</span>
+</a>
+</div>
+<!-- Bottom Action Buttons Dock -->
+<div class="flex flex-col space-y-space-sm pt-space-xs">
+<button class="w-full h-13 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center space-x-2 shadow-md transition-all active:scale-[0.98]" id="refreshStatusBtn" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform" id="refreshIcon">sync</span>
+<span>Refresh Real-time Status</span>
+</button>
+<button class="w-full h-12 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg flex items-center justify-center space-x-1.5 transition-colors active:scale-[0.98]" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span>Back to Orders List</span>
+</button>
+</div>
+</div>
+<script>
+  // Copy Order ID Micro-interaction
+  const copyBtn = document.getElementById('copyOrderBtn');
+  const copyToast = document.getElementById('copyToast');
+  
+  if (copyBtn && copyToast) {
+    copyBtn.addEventListener('click', () => {
+      const orderId = document.getElementById('orderIdText').textContent.trim();
+      navigator.clipboard.writeText(orderId).then(() => {
+        copyToast.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          copyToast.classList.remove('opacity-0', 'scale-95');
+          copyToast.classList.add('opacity-100', 'scale-100');
+        });
+        setTimeout(() => {
+          copyToast.classList.remove('opacity-100', 'scale-100');
+          copyToast.classList.add('opacity-0', 'scale-95');
+          setTimeout(() => copyToast.classList.add('hidden'), 300);
+        }, 2000);
+      }).catch(() => {
+        // Fallback
+        copyToast.textContent = 'Selected: ' + orderId;
+        copyToast.classList.remove('hidden');
+        setTimeout(() => copyToast.classList.add('hidden'), 1500);
+      });
+    });
+  }
+
+  // Refresh status button spin feedback
+  const refreshBtn = document.getElementById('refreshStatusBtn');
+  const refreshIcon = document.getElementById('refreshIcon');
+  if (refreshBtn && refreshIcon) {
+    refreshBtn.addEventListener('click', () => {
+      refreshIcon.classList.add('animate-spin');
+      refreshBtn.disabled = true;
+      setTimeout(() => {
+        refreshIcon.classList.remove('animate-spin');
+        refreshBtn.disabled = false;
+      }, 900);
+    });
+  }
+</script></main></body></html>

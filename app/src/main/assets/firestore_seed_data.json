@@ -1,0 +1,525 @@
+{
+  "users": [
+    {
+      "userId": 1,
+      "name": "PrintXpress Press Admin",
+      "email": "admin@printxpress.lk",
+      "phone": "0112345000",
+      "passwordHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+      "registrationDate": 1785897730213,
+      "userType": "ADMIN"
+    },
+    {
+      "userId": 2,
+      "name": "Kasun Perera (Apex Lanka)",
+      "email": "demo@printxpress.lk",
+      "phone": "0771234567",
+      "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "registrationDate": 1789872130213,
+      "userType": "CUSTOMER"
+    }
+  ],
+  "addresses": [
+    {
+      "addressId": 1,
+      "userId": 2,
+      "addressLine1": "No. 42, Galle Road, Kollupitiya",
+      "addressLine2": "Level 3, Apex Tower",
+      "city": "Colombo 03",
+      "postalCode": "00300",
+      "phone": "0771234567",
+      "isDefault": true
+    },
+    {
+      "addressId": 2,
+      "userId": 2,
+      "addressLine1": "Block B, Orion City IT Park, 752 Baseline Road",
+      "addressLine2": "Dematagoda",
+      "city": "Colombo 09",
+      "postalCode": "00900",
+      "phone": "0112345678",
+      "isDefault": false
+    }
+  ],
+  "categories": [
+    {
+      "categoryId": 1,
+      "name": "Business Cards",
+      "description": "350gsm–400gsm matte, velvet soft-touch, spot UV & letterheads",
+      "imageUrl": "ic_cat_business_cards"
+    },
+    {
+      "categoryId": 2,
+      "name": "Flyers",
+      "description": "High-speed Heidelberg offset leaflets, tri-fold menus & posters",
+      "imageUrl": "ic_cat_flyers"
+    },
+    {
+      "categoryId": 3,
+      "name": "Banners",
+      "description": "Retractable pull-up stands, outdoor PVC flex & X-frame displays",
+      "imageUrl": "ic_cat_banners"
+    },
+    {
+      "categoryId": 4,
+      "name": "T-Shirts",
+      "description": "DTF screen-printed cotton tees, embroidered pique polos & hoodies",
+      "imageUrl": "ic_cat_tshirts"
+    },
+    {
+      "categoryId": 5,
+      "name": "Mugs",
+      "description": "Sublimated ceramic mugs, laser-engraved vacuum flasks & gift sets",
+      "imageUrl": "ic_cat_mugs"
+    },
+    {
+      "categoryId": 6,
+      "name": "Stickers & Packaging",
+      "description": "Waterproof die-cut vinyl stickers, roll labels & mailer boxes",
+      "imageUrl": "ic_cat_stickers"
+    },
+    {
+      "categoryId": 7,
+      "name": "Books & Catalogs",
+      "description": "Saddle-stitched booklets, annual reports, notebooks & calendars",
+      "imageUrl": "ic_cat_booklets"
+    },
+    {
+      "categoryId": 8,
+      "name": "Events & ID Passes",
+      "description": "CR80 PVC employee ID cards, sublimated satin lanyards & invitations",
+      "imageUrl": "ic_cat_events"
+    }
+  ],
+  "products": [
+    {
+      "productId": 1,
+      "categoryId": 1,
+      "name": "Premium Business Card",
+      "description": "Double-sided full-color CMYK visiting cards printed on heavy 350gsm–400gsm European art board with optional velvet lamination.",
+      "basePrice": 2500,
+      "imageUrl": "premium_card",
+      "availableSizes": "90x54mm Standard (100 pcs), 85x55mm Euro (100 pcs), 65x65mm Square (100 pcs)",
+      "availableMaterials": "350gsm Art Matte, 400gsm Velvet Soft-Touch, 350gsm High Gloss",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 2,
+      "categoryId": 1,
+      "name": "Spot UV & Gold Foil Visiting Cards",
+      "description": "Executive luxury business cards featuring raised 3D Spot UV gloss or metallic gold/silver hot-foil stamping on 400gsm velvet card.",
+      "basePrice": 4800,
+      "imageUrl": "premium_card",
+      "availableSizes": "90x54mm Standard (100 pcs), 85x55mm Rounded Corners (100 pcs)",
+      "availableMaterials": "400gsm Velvet Matte + Gold Foil, 400gsm Matte + Raised Spot UV, 350gsm Textured Linen",
+      "stockQuantity": 12
+    },
+    {
+      "productId": 3,
+      "categoryId": 1,
+      "name": "Corporate Letterheads (A4 Conqueror Stock)",
+      "description": "Laser- and inkjet-safe official company letterheads with crisp offset watermark-grade reproduction for invoices and legal correspondence.",
+      "basePrice": 3800,
+      "imageUrl": "premium_card",
+      "availableSizes": "A4 (210x297mm - 100 Sheets), A4 (210x297mm - 500 Sheets)",
+      "availableMaterials": "100gsm Bank Bond, 120gsm Conqueror Wove, 120gsm Textured Laid",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 4,
+      "categoryId": 1,
+      "name": "Custom Branded DL & C5 Window Envelopes",
+      "description": "Custom printed corporate envelopes with company return address and logo, featuring peel-and-seal adhesive strips.",
+      "basePrice": 3200,
+      "imageUrl": "premium_card",
+      "availableSizes": "DL (110x220mm - 100 pcs), C5 (162x229mm - 100 pcs), C4 (229x324mm - 100 pcs)",
+      "availableMaterials": "100gsm White Woodfree, 120gsm Kraft Brown, 120gsm Peel-and-Seal Window",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 5,
+      "categoryId": 2,
+      "name": "Standard Flyer A5",
+      "description": "High-impact promotional handouts and event leaflets printed on Heidelberg offset presses with vibrant double-sided color.",
+      "basePrice": 1500,
+      "imageUrl": "flyer_a5",
+      "availableSizes": "A5 Single-Sided (100 pcs), A5 Double-Sided (100 pcs), A4 Double-Sided (100 pcs)",
+      "availableMaterials": "130gsm Gloss Art Paper, 150gsm Silk Matte, 170gsm Premium Art",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 6,
+      "categoryId": 2,
+      "name": "Tri-Fold Corporate Brochure & Takeaway Menu",
+      "description": "Machine-creased 6-panel tri-fold or Z-fold brochures ideal for company profiles, hotel spa guides, and restaurant takeaway menus.",
+      "basePrice": 4200,
+      "imageUrl": "flyer_a5",
+      "availableSizes": "A4 Tri-Fold to DL (50 pcs), A3 Tri-Fold to A4 (50 pcs)",
+      "availableMaterials": "170gsm Gloss Art, 200gsm Matte Laminated, 250gsm Art Board",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 7,
+      "categoryId": 2,
+      "name": "DL Promotional Rack Cards & Gift Vouchers",
+      "description": "Sturdy 300gsm–350gsm card stock vouchers, hotel door hangers, and counter display rack cards with optional perforation.",
+      "basePrice": 2200,
+      "imageUrl": "flyer_a5",
+      "availableSizes": "DL 99x210mm (100 pcs), A6 Postcard (100 pcs)",
+      "availableMaterials": "300gsm Art Card Glossy, 300gsm Matte Laminated, 350gsm Uncoated Writable",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 8,
+      "categoryId": 2,
+      "name": "A3 & A2 Retail Point-of-Sale Wall Posters",
+      "description": "Large high-resolution indoor promotional posters for retail storefronts, tuition announcements, and concert promotions.",
+      "basePrice": 2800,
+      "imageUrl": "flyer_a5",
+      "availableSizes": "A3 (297x420mm - 10 pcs), A2 (420x594mm - 10 pcs)",
+      "availableMaterials": "170gsm High-Gloss Poster Paper, 200gsm Satin Photo Stock, 250gsm Art Card",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 9,
+      "categoryId": 3,
+      "name": "Roll-up Pull Banner",
+      "description": "Retractable anodized aluminum cassette stand with padded carry bag and non-curl 1440dpi eco-solvent graphic print.",
+      "basePrice": 7500,
+      "imageUrl": "banner_rollup",
+      "availableSizes": "Standard (2.5x6.5 ft / 85x200cm), Wide (3x6.5 ft / 100x200cm), Luxury Broad-Base (3x6.5 ft)",
+      "availableMaterials": "300gsm Grey-Back Anti-Curl Film, 440gsm Matte Blockout Vinyl, Heavy-Duty Satin",
+      "stockQuantity": 12
+    },
+    {
+      "productId": 10,
+      "categoryId": 3,
+      "name": "Outdoor Heavy-Duty Weatherproof PVC Flex Banner",
+      "description": "UV-resistant and waterproof outdoor commercial banner with reinforced welded hems and rust-proof brass eyelets every 2 feet.",
+      "basePrice": 1800,
+      "imageUrl": "banner_rollup",
+      "availableSizes": "4x2 ft (Eyelets Included), 6x3 ft (Eyelets Included), 8x4 ft Large Format, 10x5 ft Billboard",
+      "availableMaterials": "440gsm Star Flex Glossy, 510gsm Black-Back Heavy Flex, Wind-Slit Mesh Vinyl",
+      "stockQuantity": 12
+    },
+    {
+      "productId": 11,
+      "categoryId": 3,
+      "name": "Portable X-Banner Display Stand with Print",
+      "description": "Lightweight fiberglass and carbon-steel tension X-frame stand with quick-change corner grommet banner for exhibitions and lobbies.",
+      "basePrice": 4500,
+      "imageUrl": "banner_rollup",
+      "availableSizes": "Standard (2x5 ft / 60x160cm), Large (2.5x6 ft / 80x180cm)",
+      "availableMaterials": "340gsm Matte PVC Vinyl, 300gsm Tear-Resistant Polypropylene",
+      "stockQuantity": 12
+    },
+    {
+      "productId": 12,
+      "categoryId": 3,
+      "name": "Mounted Sunboard & Rigid PVC Foam Signage",
+      "description": "Direct UV-flatbed or laminated vinyl mounted onto rigid 5mm foam board for indoor directional signage and exhibition booths.",
+      "basePrice": 3400,
+      "imageUrl": "banner_rollup",
+      "availableSizes": "A3 (297x420mm), A2 (420x594mm), A1 (594x841mm)",
+      "availableMaterials": "5mm High-Density Sunboard + Matte Vinyl, 3mm PVC Celuka Board, 5mm Gloss Mounted Foam",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 13,
+      "categoryId": 4,
+      "name": "Custom Cotton T-Shirt",
+      "description": "Pre-shrunk 100% ring-spun combed cotton crew-neck tee with vibrant DTF full-color chest and back printing or plastisol screen print.",
+      "basePrice": 3200,
+      "imageUrl": "tshirt_cotton",
+      "availableSizes": "S, M, L, XL, XXL",
+      "availableMaterials": "190gsm 100% Combed Cotton, 220gsm Heavyweight Oversized Cotton, 160gsm Poly-Cotton Blend",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 14,
+      "categoryId": 4,
+      "name": "Embroidered Corporate Pique Polo Shirt",
+      "description": "Smart-casual collared company uniform shirt featuring high-stitch-density computerized logo embroidery on left chest and sleeve.",
+      "basePrice": 3950,
+      "imageUrl": "tshirt_cotton",
+      "availableSizes": "S, M, L, XL, XXL",
+      "availableMaterials": "220gsm Honeycomb Pique Cotton, 200gsm Breathable Moisture-Wicking Polo, 240gsm Mercerized Cotton",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 15,
+      "categoryId": 4,
+      "name": "Dry-Fit Marathon & Corporate Cricket Jersey",
+      "description": "Breathable moisture-wicking athletic jersey with edge-to-edge dye sublimation that never cracks, peels, or fades.",
+      "basePrice": 2650,
+      "imageUrl": "tshirt_cotton",
+      "availableSizes": "S, M, L, XL, XXL",
+      "availableMaterials": "150gsm Micro-Mesh Dry-Fit (Full Sublimation), 160gsm Anti-UV Athletic Poly",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 16,
+      "categoryId": 4,
+      "name": "Custom Fleece Pullover Company Hoodie",
+      "description": "Warm double-lined hood pullover with kangaroo pocket, ribbed cuffs, and custom DTF or embroidered team branding.",
+      "basePrice": 6800,
+      "imageUrl": "tshirt_cotton",
+      "availableSizes": "S, M, L, XL, XXL",
+      "availableMaterials": "320gsm Brushed Cotton Fleece, 280gsm French Terry Loopback",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 17,
+      "categoryId": 5,
+      "name": "Custom Ceramic Mug",
+      "description": "Dishwasher- and microwave-safe AAA-grade ceramic mug with full-wrap panoramic dye-sublimation photo or logo print.",
+      "basePrice": 1200,
+      "imageUrl": "mug_ceramic",
+      "availableSizes": "11 oz Standard (325ml), 15 oz Tall Executive (440ml)",
+      "availableMaterials": "AAA-Grade Glossy White Ceramic, Heat-Sensitive Matte Black Magic Mug, Inner-Color Rim Ceramic",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 18,
+      "categoryId": 5,
+      "name": "Laser-Engraved Double-Wall Thermal Vacuum Flask",
+      "description": "Insulated 304 stainless-steel bottle keeping drinks cold for 24h or hot for 12h, permanently laser-etched with your company logo.",
+      "basePrice": 3600,
+      "imageUrl": "mug_ceramic",
+      "availableSizes": "500ml Insulated Bottle, 750ml Sports Vacuum Flask",
+      "availableMaterials": "304 Double-Wall Matte Black Steel, Brushed Silver Stainless, Bamboo-Lid Eco Steel",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 19,
+      "categoryId": 5,
+      "name": "Executive Onboarding Corporate Welcome Gift Box",
+      "description": "Curated new-hire and VIP client gift box containing a branded A5 PU notebook, metal rollerball pen, and insulated drinkware.",
+      "basePrice": 8500,
+      "imageUrl": "mug_ceramic",
+      "availableSizes": "3-Piece Starter Set (Notebook + Pen + Mug), 5-Piece VIP Set (+ Flask & 32GB Metal USB)",
+      "availableMaterials": "Matte Black Magnetic Presentation Box, Eco Kraft Rigid Gift Box",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 20,
+      "categoryId": 6,
+      "name": "Custom Die-Cut Waterproof Vinyl Stickers",
+      "description": "Precision contour-cut stickers resistant to water, oil, and sunlight—ideal for laptops, merchandise packs, and bumper branding.",
+      "basePrice": 1600,
+      "imageUrl": "sticker_vinyl",
+      "availableSizes": "2x2 inch (50 pcs), 3x3 inch (50 pcs), 4x4 inch (50 pcs), A4 Kiss-Cut Sheet (10 Sheets)",
+      "availableMaterials": "White Waterproof PVC Vinyl + Matte Lamination, Clear Transparent Vinyl, Holographic Rainbow Vinyl",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 21,
+      "categoryId": 6,
+      "name": "Product Bottle, Cosmetic & Spice Jar Roll Labels",
+      "description": "Commercial-grade self-adhesive roll or sheet labels engineered for food jars, beverage bottles, cosmetics, and export packaging.",
+      "basePrice": 2900,
+      "imageUrl": "sticker_vinyl",
+      "availableSizes": "50x30mm (250 Labels), 80x50mm (250 Labels), 100x70mm (250 Labels)",
+      "availableMaterials": "Waterproof BOPP Synthetic Gloss, Textured Estate Wine Paper, Eco Brown Kraft Adhesive",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 22,
+      "categoryId": 6,
+      "name": "Custom Printed E-Commerce Corrugated Mailer Boxes",
+      "description": "Crush-resistant self-locking D2C shipping boxes printed inside and out with your brand colors and unboxing message.",
+      "basePrice": 6500,
+      "imageUrl": "sticker_vinyl",
+      "availableSizes": "Small (6x4x2 in - 25 Boxes), Medium (9x6x3 in - 25 Boxes), Large (12x9x4 in - 25 Boxes)",
+      "availableMaterials": "3-Ply E-Flute Brown Kraft Corrugated, White Top-Coated Corrugated, Matte Black Luxury Mailer",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 23,
+      "categoryId": 7,
+      "name": "Saddle-Stitched Product Catalog & Annual Report",
+      "description": "Full-color multi-page booklets stapled on the spine with heavy laminated art-board covers and crisp gloss or silk inside pages.",
+      "basePrice": 6200,
+      "imageUrl": "booklet_catalog",
+      "availableSizes": "A5 Portrait (16 Pages - 25 Copies), A4 Portrait (16 Pages - 25 Copies), A4 Portrait (32 Pages - 25 Copies)",
+      "availableMaterials": "250gsm Art Card Cover + 130gsm Gloss Inner, 300gsm Matte Laminated Cover + 150gsm Silk Inner",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 24,
+      "categoryId": 7,
+      "name": "Hardcover & Wire-O Branded Company Notebooks",
+      "description": "Custom corporate journals with 80gsm cream ivory ruled pages, ribbon bookmark, and custom printed or debossed cover.",
+      "basePrice": 1850,
+      "imageUrl": "booklet_catalog",
+      "availableSizes": "A5 (148x210mm - 80 Ruled Leaves), B5 Executive (176x250mm - 100 Leaves)",
+      "availableMaterials": "PU Leather Debossed Hardcover, 350gsm Matte Laminated Wire-O Spiral, Eco Recycled Cork & Kraft",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 25,
+      "categoryId": 7,
+      "name": "2027 Corporate Desk Tent Calendars",
+      "description": "13-leaf double-sided wiro-bound desk calendar featuring Sri Lankan Mercantile & Poya holidays and custom monthly brand imagery.",
+      "basePrice": 4400,
+      "imageUrl": "booklet_catalog",
+      "availableSizes": "Landscape 8.5x6 in (13 Leaves - 10 pcs), Portrait 6x8.5 in (13 Leaves - 10 pcs)",
+      "availableMaterials": "700gsm Rigid Linen Hardboard Stand + 200gsm Matte Art Leaves, Eco Kraft Stand + 230gsm Ivory Card",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 26,
+      "categoryId": 8,
+      "name": "CR80 PVC Employee ID Cards & Event Badges",
+      "description": "High-definition thermal-transfer CR80 plastic ID cards with barcode/QR serialization, slot punch, and optional RFID proximity chip.",
+      "basePrice": 950,
+      "imageUrl": "event_lanyard",
+      "availableSizes": "CR80 Credit Card Size (85.6x54mm - 5 Cards), A6 Oversized Event VIP Pass (5 Cards)",
+      "availableMaterials": "760 Micron Glossy Thermal PVC, Matte Composite PVC with RFID/NFC Chip, Frosted Transparent PVC",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 27,
+      "categoryId": 8,
+      "name": "Full-Color Sublimated Satin Neck Lanyards",
+      "description": "Silky-smooth double-sided polyester lanyards with edge-to-edge logo sublimation, metal trigger clip, and safety breakaway clasp.",
+      "basePrice": 2400,
+      "imageUrl": "event_lanyard",
+      "availableSizes": "15mm Width (10 Lanyards), 20mm Standard Width (10 Lanyards), 25mm Wide Event Strap (10 Lanyards)",
+      "availableMaterials": "Smooth Double-Sided Polyester Satin + Metal Lobster Hook, Safety Breakaway Buckle + Rigid ID Holder",
+      "stockQuantity": 120
+    },
+    {
+      "productId": 28,
+      "categoryId": 8,
+      "name": "Luxury Foil-Stamped Wedding & Gala Invitations",
+      "description": "Bespoke invitations crafted on imported shimmer, velvet, or cotton card stock with matching wax-seal ready envelopes.",
+      "basePrice": 5400,
+      "imageUrl": "event_lanyard",
+      "availableSizes": "5x7 inch Flat Card + Envelope (50 Sets), 6x6 inch Laser-Cut Gatefold (50 Sets)",
+      "availableMaterials": "350gsm Pearl Shimmer Ivory Board, 400gsm Emerald/Navy Velvet Card + Gold Foil, 320gsm Textured Cotton Rag",
+      "stockQuantity": 12
+    }
+  ],
+  "promotions": [
+    {
+      "promotionId": 1,
+      "code": "WELCOME10",
+      "title": "10% Off First Order",
+      "description": "Enjoy 10% discount on your first commercial print order.",
+      "discountPercentage": 10,
+      "minOrderAmount": 1000,
+      "validUntil": 1793673730214,
+      "isActive": true
+    },
+    {
+      "promotionId": 2,
+      "code": "PXBIZ20",
+      "title": "20% OFF Bulk Business Cards",
+      "description": "Upgrade your company branding with 500+ premium matte or velvet-touch visiting cards.",
+      "discountPercentage": 20,
+      "minOrderAmount": 2500,
+      "validUntil": 1793673730214,
+      "isActive": true
+    },
+    {
+      "promotionId": 3,
+      "code": "FLYER15",
+      "title": "15% Off A5 & A4 Event Leaflets",
+      "description": "High-speed double-sided Heidelberg print output on runs of 500 pcs or more.",
+      "discountPercentage": 15,
+      "minOrderAmount": 3000,
+      "validUntil": 1793673730214,
+      "isActive": true
+    },
+    {
+      "promotionId": 4,
+      "code": "PRINT20",
+      "title": "20% Off Corporate Stationery",
+      "description": "Special promotional discount on business cards, letterheads, and envelopes.",
+      "discountPercentage": 20,
+      "minOrderAmount": 2000,
+      "validUntil": 1793673730214,
+      "isActive": true
+    }
+  ],
+  "orders": [
+    {
+      "orderId": 1,
+      "customerId": 2,
+      "orderDate": 1790995330213,
+      "deliveryMethod": "Home Delivery",
+      "deliveryAddressId": 1,
+      "paymentMethod": "Credit / Debit Card",
+      "paymentStatus": "PAID",
+      "orderStatus": "PRINTING",
+      "totalAmount": 11840,
+      "scheduledPickupDate": null
+    },
+    {
+      "orderId": 2,
+      "customerId": 2,
+      "orderDate": 1790822530213,
+      "deliveryMethod": "Store Pickup",
+      "deliveryAddressId": null,
+      "paymentMethod": "Cash on Delivery",
+      "paymentStatus": "PENDING",
+      "orderStatus": "READY",
+      "totalAmount": 8910,
+      "scheduledPickupDate": null
+    }
+  ],
+  "order_items": [
+    {
+      "orderItemId": 1,
+      "orderId": 1,
+      "productId": 1,
+      "quantity": 2,
+      "unitPrice": 2750,
+      "subtotal": 5500,
+      "customisationDetails": "Size: 90x54mm Standard (100 pcs) | Material: 400gsm Velvet Soft-Touch | Text: Kasun Perera - Managing Director",
+      "artworkFilePath": ""
+    },
+    {
+      "orderItemId": 2,
+      "orderId": 1,
+      "productId": 5,
+      "quantity": 3,
+      "unitPrice": 1650,
+      "subtotal": 4950,
+      "customisationDetails": "Size: A5 Double-Sided (100 pcs) | Material: 150gsm Silk Matte | Text: Colombo Tech Expo 2026 Handout",
+      "artworkFilePath": ""
+    },
+    {
+      "orderItemId": 3,
+      "orderId": 2,
+      "productId": 9,
+      "quantity": 1,
+      "unitPrice": 8250,
+      "subtotal": 8250,
+      "customisationDetails": "Size: Standard (2.5x6.5 ft / 85x200cm) | Material: 440gsm Matte Blockout Vinyl | Text: BMICH Booth #B14 Standee",
+      "artworkFilePath": ""
+    }
+  ],
+  "cart_items": [],
+  "notifications": [
+    {
+      "notificationId": 1,
+      "userId": 2,
+      "title": "Order #1 is now Printing 🖨️",
+      "message": "Your 400gsm Velvet Business Cards and A5 Silk Flyers are currently on the Heidelberg offset press.",
+      "timestamp": 1791078130213,
+      "isRead": false,
+      "type": "ORDER"
+    },
+    {
+      "notificationId": 2,
+      "userId": 2,
+      "title": "Order #2 Ready for Pickup ✅",
+      "message": "Your Roll-up Pull Banner is packed and ready for collection at our Colombo 03 Production Hub.",
+      "timestamp": 1791074530213,
+      "isRead": false,
+      "type": "ORDER"
+    }
+  ]
+}

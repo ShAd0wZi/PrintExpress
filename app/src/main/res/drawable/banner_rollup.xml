@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <!-- Background -->
+    <path android:fillColor="#DAE2FD" android:pathData="M0,0h320v180h-320z" />
+    <!-- Top Clamp Bar -->
+    <path android:fillColor="#283044" android:pathData="M112,14h96v6h-96z" />
+    <!-- Banner Canvas -->
+    <path android:fillColor="#0037B1" android:pathData="M116,20h88v132h-88z" />
+    <path android:fillColor="#1F4FD8" android:pathData="M116,20h88v54h-88z" />
+    <!-- Accent Stripe -->
+    <path android:fillColor="#FF7A1B" android:pathData="M116,70h88v8h-88z" />
+    <!-- Banner Content -->
+    <path android:fillColor="#FFFFFF" android:pathData="M128,34h64v9h-64z" />
+    <path android:fillColor="#CCD4FF" android:pathData="M134,48h52v6h-52z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M130,90h60v28h-60z" />
+    <path android:fillColor="#FF7A1B" android:pathData="M138,128h44v12h-44z" />
+    <!-- Aluminum Retractable Cassette Base & Feet -->
+    <path android:fillColor="#434655" android:pathData="M106,152h108v12h-108z" />
+    <path android:fillColor="#747686" android:pathData="M108,154h104v4h-104z" />
+    <path android:fillColor="#131B2E" android:pathData="M118,164h16v5h-16zM186,164h16v5h-16z" />
+</vector>

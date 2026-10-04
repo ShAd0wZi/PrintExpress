@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:translateX="-9"
+        android:translateY="-6">
+        <!-- White 'P' letter -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M34,88 V32 h28 c14.36,0 24,9.64 24,22 s-9.64,22 -24,22 H50 v12 H34 z" />
+
+        <!-- Blue inner cutout of 'P' -->
+        <path
+            android:fillColor="#1F4FD8"
+            android:pathData="M50,46 h12 c5.523,0 10,4.477 10,10 s-4.477,10 -10,10 H50 V46 z" />
+
+        <!-- Orange circular check badge -->
+        <path
+            android:fillColor="#FF7A1A"
+            android:pathData="M64,74 a14,14 0 1,0 28,0 a14,14 0 1,0 -28,0 Z" />
+
+        <!-- White checkmark -->
+        <path
+            android:pathData="M73,74 L76.5,77.5 L83,70.5"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="2.8"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+    </group>
+</vector>

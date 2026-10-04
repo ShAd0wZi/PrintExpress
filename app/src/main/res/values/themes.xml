@@ -1,0 +1,255 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ===== Base Application Theme (Material 3 Commercial Print Engine) ===== -->
+    <style name="Theme.PrintXpress" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color (Printify Emerald) -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+
+        <!-- Secondary brand color (Warm Amber) -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_fixed_dim</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+
+        <!-- Tertiary: Functional Green / Eco Fresh -->
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
+
+        <!-- Surface and background (Clean crisp canvas) -->
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_container_high</item>
+        <item name="android:colorBackground">@color/surface</item>
+        <item name="colorOnBackground">@color/on_surface</item>
+
+        <!-- Error state -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        <item name="colorErrorContainer">@color/error_container</item>
+        <item name="colorOnErrorContainer">@color/on_error_container</item>
+
+        <!-- Status bar: Clean light style -->
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+
+        <!-- Shape ergonomics: 8dp small, 14dp medium, 20dp large cards -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.PrintXpress.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.PrintXpress.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.PrintXpress.LargeComponent</item>
+
+        <!-- Typography: Plus Jakarta Sans -->
+        <item name="fontFamily">@font/font_family_brand</item>
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.PrintXpress.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.PrintXpress.HeadlineMedium</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.PrintXpress.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.PrintXpress.TitleMedium</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.PrintXpress.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.PrintXpress.BodyMedium</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.PrintXpress.LabelLarge</item>
+
+        <!-- Button style -->
+        <item name="materialButtonStyle">@style/Widget.PrintXpress.Button.Primary</item>
+
+        <!-- Bottom navigation -->
+        <item name="bottomNavigationStyle">@style/Widget.PrintXpress.BottomNavigationView</item>
+
+        <!-- Card style -->
+        <item name="materialCardViewStyle">@style/Widget.PrintXpress.CardView</item>
+
+        <!-- TextInputLayout -->
+        <item name="textInputStyle">@style/Widget.PrintXpress.TextInputLayout</item>
+    </style>
+
+    <!-- ===== Splash Theme ===== -->
+    <style name="Theme.PrintXpress.Splash" parent="Theme.PrintXpress">
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:windowBackground">@color/surface</item>
+    </style>
+
+    <!-- ===== Shape Appearances ===== -->
+    <style name="ShapeAppearance.PrintXpress.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.PrintXpress.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+
+    <style name="ShapeAppearance.PrintXpress.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="ShapeAppearance.PrintXpress.Pill" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">999dp</item>
+    </style>
+
+    <!-- ===== Typography ===== -->
+    <style name="TextAppearance.PrintXpress.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="TextAppearance.PrintXpress.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <style name="TextAppearance.PrintXpress.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <style name="TextAppearance.PrintXpress.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <style name="TextAppearance.PrintXpress.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+    </style>
+
+    <style name="TextAppearance.PrintXpress.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="TextAppearance.PrintXpress.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- ===== Button Styles ===== -->
+    <!-- Primary filled button: 52dp height, 14dp radius, solid emerald -->
+    <style name="Widget.PrintXpress.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="backgroundTint">@color/primary_container</item>
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+    </style>
+
+    <!-- Outlined / secondary button -->
+    <style name="Widget.PrintXpress.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/primary_container</item>
+        <item name="strokeColor">@color/primary_container</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+    </style>
+
+    <!-- Text / ghost button -->
+    <style name="Widget.PrintXpress.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary_container</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Danger button -->
+    <style name="Widget.PrintXpress.Button.Danger" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:textColor">@color/error</item>
+        <item name="strokeColor">@color/error</item>
+    </style>
+
+    <!-- ===== Bottom Navigation ===== -->
+    <style name="Widget.PrintXpress.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/surface_container_lowest</item>
+        <item name="itemIconTint">@color/bottom_nav_selector</item>
+        <item name="itemTextColor">@color/bottom_nav_selector</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="android:elevation">8dp</item>
+    </style>
+
+    <!-- ===== CardView ===== -->
+    <style name="Widget.PrintXpress.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">18dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">@color/surface_container_lowest</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/outline_variant</item>
+    </style>
+
+    <!-- ===== TextInputLayout (Outlined) ===== -->
+    <style name="Widget.PrintXpress.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/text_input_stroke_selector</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">@color/surface_container_lowest</item>
+        <item name="hintTextColor">@color/primary_container</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <!-- ===== AppBar ===== -->
+    <style name="Widget.PrintXpress.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/surface</item>
+        <item name="titleTextColor">@color/on_surface</item>
+        <item name="android:minHeight">56dp</item>
+    </style>
+
+    <!-- ===== Section Header ===== -->
+    <style name="TextAppearance.PrintXpress.SectionHeader" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- ===== Caption / Label ===== -->
+    <style name="TextAppearance.PrintXpress.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+    </style>
+
+    <!-- ===== Badge / Status Pill ===== -->
+    <style name="Widget.PrintXpress.StatusBadge" parent="android:Widget">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+</resources>

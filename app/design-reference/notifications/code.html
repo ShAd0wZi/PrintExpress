@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface": "#131b2e", "surface": "#faf8ff", "surface-container-low": "#f2f3ff", "surface-variant": "#dae2fd", "on-primary-container": "#ccd4ff", "inverse-surface": "#283044", "tertiary-container": "#006c30", "error": "#ba1a1a", "primary-container": "#1f4fd8", "on-secondary": "#ffffff", "surface-container-highest": "#dae2fd", "tertiary": "#005122", "secondary-container": "#ff7a1b", "on-background": "#131b2e", "tertiary-fixed": "#95f8a7", "on-primary-fixed-variant": "#0039b5", "on-primary-fixed": "#001551", "surface-container": "#eaedff", "surface-tint": "#2251da", "inverse-primary": "#b7c4ff", "primary-fixed-dim": "#b7c4ff", "secondary-fixed-dim": "#ffb68e", "on-primary": "#ffffff", "tertiary-fixed-dim": "#79db8d", "surface-container-lowest": "#ffffff", "secondary-fixed": "#ffdbca", "on-surface-variant": "#434655", "error-container": "#ffdad6", "secondary": "#9c4500", "on-error": "#ffffff", "on-secondary-fixed-variant": "#773300", "on-tertiary-container": "#89ec9b", "surface-bright": "#faf8ff", "on-secondary-container": "#5e2700", "outline": "#747686", "primary": "#0037b1", "primary-fixed": "#dce1ff", "background": "#faf8ff", "surface-container-high": "#e2e7ff", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "on-tertiary-fixed-variant": "#005323", "inverse-on-surface": "#eef0ff", "surface-dim": "#d2d9f4", "outline-variant": "#c4c5d7", "on-secondary-fixed": "#331200", "on-tertiary-fixed": "#00210a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2rem", "gutter": "1rem", "space-lg": "1.5rem", "margin": "1rem" }, fontFamily: { "body-md": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"] }, fontSize: { "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "16px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "label-md": ["13px", { lineHeight: "18px", fontWeight: "500" }], "headline-lg": ["28px", { lineHeight: "36px", fontWeight: "700" }], "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "500" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }] } } } };</script><style>@layer base { html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; } body { min-height: max(884px, 100dvh); }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container active:bg-surface-container-high transition-colors text-on-surface" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="PrintXpress logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UuVI51mR8aomExe7Q2z06-CK_K2MFhtx_PwOpgHxVK3YxG6AlifjBC7kZw0_1MsrxRWMo9MC2YhDpGNg7meBi3s_74o9fewm5HT5Y_sH0_xVqrrp1lmC5AYaKPqeMgEhqtQbJmt6SuhkoU7Di5-6fWPZRROCpmOgIWdBxy4YNNaKlsvMyNmfgCa_Xv9CvrK_pz6oew6Svrs-BRfvxH3rPX1QEAWODoAH4tWBlT1lNEo-pMovplcBNepQnj"/><h1 class="font-headline-sm text-headline-sm text-on-surface ml-space-xs tracking-tight truncate">Notifications</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Help and Support" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container active:bg-surface-container-high transition-colors text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[22px]">help_outline</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Top Secondary Header Row: Action Button & Count -->
+<div class="px-margin pt-2 pb-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Inbox</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center justify-center" id="unreadCounterBadge">2 New</span>
+</div>
+<button class="h-11 px-3 flex items-center justify-center font-label-lg text-label-lg text-primary active:opacity-70 transition-opacity rounded-lg" id="markAllReadBtn" type="button">
+      Mark All as Read
+    </button>
+</div>
+<!-- Filter Chips (M3 Android Horizontal Scroll) -->
+<div class="px-margin mb-4 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-2 min-w-max py-1" role="tablist">
+<button aria-selected="true" class="filter-tab active h-9 px-4 rounded-xl font-label-md text-label-md bg-primary text-on-primary shadow-sm transition-all flex items-center gap-1.5" onclick="filterCategory('all', this)" role="tab">
+<span>All</span>
+<span class="px-1.5 py-0.2 rounded-full text-label-sm font-label-sm bg-surface-container-lowest/20">5</span>
+</button>
+<button aria-selected="false" class="filter-tab h-9 px-4 rounded-xl font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5 shadow-sm" onclick="filterCategory('orders', this)" role="tab">
+<span>Orders</span>
+<span class="px-1.5 py-0.2 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant">3</span>
+</button>
+<button aria-selected="false" class="filter-tab h-9 px-4 rounded-xl font-label-md text-label-md bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5 shadow-sm" onclick="filterCategory('promos', this)" role="tab">
+<span>Promos</span>
+<span class="px-1.5 py-0.2 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant">2</span>
+</button>
+</div>
+</div>
+<!-- Notification Cards Stream -->
+<div class="px-margin flex flex-col gap-3" id="notificationsContainer">
+<!-- 1. Unread Notification (Order Update - Print Press Run) -->
+<div class="notification-card unread group relative bg-surface-container-low rounded-xl p-4 shadow-sm transition-all overflow-hidden" data-category="orders" id="notif-1">
+<!-- Blue Accent Stripe for unread primary update -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary unread-stripe"></div>
+<div class="flex items-start gap-3 pl-1">
+<!-- Visual Icon Badge -->
+<div class="w-11 h-11 shrink-0 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[22px]">print</span>
+</div>
+<!-- Content Area -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<div class="flex items-center gap-1.5 min-w-0">
+<h2 class="font-headline-sm text-[15px] leading-5 text-on-surface truncate">Proof Approved &amp; Sent to Press</h2>
+<span class="unread-dot w-2 h-2 shrink-0 rounded-full bg-primary inline-block"></span>
+</div>
+<span class="text-label-sm font-label-sm text-outline shrink-0">12m</span>
+</div>
+<p class="font-label-sm text-label-sm text-primary mb-1 font-medium">Order #PX-12345 • Heidelberg Line 2</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug line-clamp-2 mb-3">
+            Your 500x Premium Matte Business Cards have passed digital pre-flight checks and are now on Heidelberg Offset Press Line 2.
+          </p>
+<!-- Action Row (min touch target: 48px) -->
+<div class="flex items-center justify-between pt-1">
+<button class="mark-single-read-btn h-11 px-2 -ml-2 rounded-lg font-label-md text-label-md text-outline hover:text-on-surface flex items-center gap-1 active:bg-surface-container" onclick="markCardRead('notif-1')" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Mark as Read</span>
+</button>
+<button class="h-11 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 active:bg-primary-container shadow-sm" type="button">
+<span>Track Run</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Unread Notification (Urgent Artwork Proof Action) -->
+<div class="notification-card unread relative bg-secondary-fixed rounded-xl p-4 shadow-sm transition-all overflow-hidden" data-category="orders" id="notif-2">
+<!-- Amber/Orange Accent Indicator -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary-container unread-stripe"></div>
+<div class="flex items-start gap-3 pl-1">
+<!-- Visual Icon Badge -->
+<div class="w-11 h-11 shrink-0 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+<!-- Content Area -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<div class="flex items-center gap-1.5 min-w-0">
+<h2 class="font-headline-sm text-[15px] leading-5 text-on-secondary-fixed truncate">Pre-press Action Required</h2>
+<span class="unread-dot w-2 h-2 shrink-0 rounded-full bg-secondary-container inline-block"></span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary shrink-0 font-medium">1h ago</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary mb-1 font-semibold">Order #PX-12290 • Bleed Clearance Alert</p>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed leading-snug mb-3">
+            Flyer artwork bleed clearance is under 1.5mm. Please approve auto-stretch or re-upload your vector file to prevent trim loss.
+          </p>
+<!-- Action Row -->
+<div class="flex items-center justify-between pt-1">
+<button class="mark-single-read-btn h-11 px-2 -ml-2 rounded-lg font-label-md text-label-md text-secondary hover:text-on-secondary-fixed flex items-center gap-1 active:bg-secondary-fixed-dim" onclick="markCardRead('notif-2')" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+<span>Dismiss Alert</span>
+</button>
+<button class="h-11 px-4 rounded-xl bg-secondary-container text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:opacity-90" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+<span>Review Proof</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Read Notification (Promo Announcement) -->
+<div class="notification-card bg-surface-container-lowest rounded-xl p-4 shadow-sm transition-all" data-category="promos" id="notif-3">
+<div class="flex items-start gap-3">
+<!-- Visual Icon Badge -->
+<div class="w-11 h-11 shrink-0 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">local_offer</span>
+</div>
+<!-- Content Area -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<h2 class="font-label-lg text-label-lg text-on-surface truncate">Flash Sale: 20% OFF Visiting Cards</h2>
+<span class="text-label-sm font-label-sm text-outline shrink-0">Yesterday</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline mb-1">Promo Code: PXBIZ20</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug line-clamp-2 mb-3">
+            Get 20% off all bulk visiting card orders this week with code <span class="font-semibold text-on-surface">PXBIZ20</span> at checkout. Valid on linen, matte &amp; velvet lamination.
+          </p>
+<!-- Visual Coupon Snippet -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">confirmation_number</span>
+<span class="font-mono text-label-md font-label-md text-on-surface">PXBIZ20</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Valid till Sun</span>
+</div>
+<div class="flex items-center justify-end">
+<button class="h-11 px-4 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 active:bg-surface-container-high transition-colors" type="button">
+<span>View Promo</span>
+<span class="material-symbols-outlined text-[16px]">launch</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Read Notification (Order Dispatch & Waybill Tracking) -->
+<div class="notification-card bg-surface-container-lowest rounded-xl p-4 shadow-sm transition-all" data-category="orders" id="notif-4">
+<div class="flex items-start gap-3">
+<!-- Visual Icon Badge -->
+<div class="w-11 h-11 shrink-0 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[22px]">local_shipping</span>
+</div>
+<!-- Content Area -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<h2 class="font-label-lg text-label-lg text-on-surface truncate">Dispatched via Prompt Xpress Courier</h2>
+<span class="text-label-sm font-label-sm text-outline shrink-0">23 Oct</span>
+</div>
+<p class="font-label-sm text-label-sm text-tertiary mb-1 font-medium">Order #PX-11942 • Waybill #SLP-88412</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug line-clamp-2 mb-3">
+            Your Die-cut Vinyl Stickers package is out for delivery in Kollupitiya, Colombo 03. Rider assigned: Kamal P. (+94 77 123 4567).
+          </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+              Delivered
+            </span>
+<button class="h-11 px-4 rounded-xl bg-surface-container text-primary font-label-md text-label-md flex items-center gap-1 active:bg-surface-container-high transition-colors" type="button">
+<span>Track Delivery</span>
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Read Notification (Special Material Arrival) -->
+<div class="notification-card bg-surface-container-lowest rounded-xl p-4 shadow-sm transition-all" data-category="promos" id="notif-5">
+<div class="flex items-start gap-3">
+<!-- Visual Icon Badge -->
+<div class="w-11 h-11 shrink-0 rounded-full bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[22px]">layers</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<h2 class="font-label-lg text-label-lg text-on-surface truncate">Back in Stock: 350gsm Kraft Board</h2>
+<span class="text-label-sm font-label-sm text-outline shrink-0">21 Oct</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline mb-1">Paper Inventory Alert</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug line-clamp-2 mb-3">
+            Eco-friendly unbleached Kraft stock is back in stock at our Colombo Central facility for hang tags and sleeve packaging.
+          </p>
+<div class="flex items-center justify-end">
+<button class="h-11 px-4 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 active:bg-surface-container-high transition-colors" type="button">
+<span>Order Stock</span>
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Empty State Preview Section -->
+<div class="px-margin mt-8 mb-4">
+<div class="p-3 bg-surface-container-high/40 rounded-xl mb-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">visibility</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Design Spec Preview</span>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container-lowest font-label-sm text-label-sm text-primary shadow-sm active:bg-surface-container" id="toggleEmptyStateBtn" type="button">
+        Test Empty Inbox
+      </button>
+</div>
+<!-- Empty State Component Card (Hidden or Toggled) -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col items-center text-center" id="emptyInboxComponent">
+<!-- Delightful Icon Stamp -->
+<div class="relative w-20 h-20 mb-4 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-[40px]">notifications_off</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">No notifications yet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mb-6">
+        We will notify you here when your pre-press proof is ready, your Heidelberg print run starts, or your courier order is dispatched across Sri Lanka.
+      </p>
+<button class="h-12 px-6 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-2 shadow-sm active:bg-primary-container" onclick="restoreInbox()" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+<span>Refresh Notifications</span>
+</button>
+</div>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+    // Mark individual card as read
+    function markCardRead(cardId) {
+      const card = document.getElementById(cardId);
+      if (!card) return;
+      
+      // Update styling to read status
+      card.classList.remove('unread', 'bg-surface-container-low', 'bg-secondary-fixed');
+      card.classList.add('bg-surface-container-lowest');
+      
+      // Hide dots & accent stripes
+      const dot = card.querySelector('.unread-dot');
+      if (dot) dot.remove();
+      
+      const stripe = card.querySelector('.unread-stripe');
+      if (stripe) stripe.remove();
+
+      const singleBtn = card.querySelector('.mark-single-read-btn');
+      if (singleBtn) singleBtn.remove();
+
+      updateUnreadBadge();
+    }
+
+    // Mark all items as read
+    const markAllBtn = document.getElementById('markAllReadBtn');
+    if (markAllBtn) {
+      markAllBtn.addEventListener('click', () => {
+        const unreadCards = document.querySelectorAll('.notification-card.unread');
+        unreadCards.forEach(card => {
+          markCardRead(card.id);
+        });
+      });
+    }
+
+    // Update unread count badge
+    function updateUnreadBadge() {
+      const unreadCount = document.querySelectorAll('.notification-card.unread').length;
+      const badge = document.getElementById('unreadCounterBadge');
+      if (!badge) return;
+
+      if (unreadCount === 0) {
+        badge.innerText = 'All Caught Up';
+        badge.classList.remove('bg-primary', 'text-on-primary');
+        badge.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+      } else {
+        badge.innerText = unreadCount + ' New';
+        badge.classList.add('bg-primary', 'text-on-primary');
+        badge.classList.remove('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+      }
+    }
+
+    // Category Tabs Filtering
+    function filterCategory(category, tabElement) {
+      // Toggle Tab Style
+      document.querySelectorAll('.filter-tab').forEach(tab => {
+        tab.classList.remove('bg-primary', 'text-on-primary');
+        tab.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        tab.setAttribute('aria-selected', 'false');
+      });
+
+      tabElement.classList.add('bg-primary', 'text-on-primary');
+      tabElement.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+      tabElement.setAttribute('aria-selected', 'true');
+
+      // Filter list
+      const cards = document.querySelectorAll('.notification-card');
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (category === 'all' || cardCat === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Empty state interactive demonstration
+    const toggleEmptyBtn = document.getElementById('toggleEmptyStateBtn');
+    const emptyBox = document.getElementById('emptyInboxComponent');
+    const notifsContainer = document.getElementById('notificationsContainer');
+
+    if (toggleEmptyBtn) {
+      toggleEmptyBtn.addEventListener('click', () => {
+        const isHidden = emptyBox.classList.contains('hidden');
+        if (isHidden) {
+          emptyBox.classList.remove('hidden');
+          notifsContainer.classList.add('opacity-40', 'pointer-events-none');
+          toggleEmptyBtn.innerText = 'Hide Preview';
+        } else {
+          emptyBox.classList.add('hidden');
+          notifsContainer.classList.remove('opacity-40', 'pointer-events-none');
+          toggleEmptyBtn.innerText = 'Test Empty Inbox';
+        }
+      });
+    }
+
+    function restoreInbox() {
+      if (emptyBox) emptyBox.classList.add('hidden');
+      if (notifsContainer) notifsContainer.classList.remove('opacity-40', 'pointer-events-none');
+      if (toggleEmptyBtn) toggleEmptyBtn.innerText = 'Test Empty Inbox';
+    }
+  </script>
+</div></main></body></html>

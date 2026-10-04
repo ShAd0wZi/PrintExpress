@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Landscape Responsive Spacing -->
+    <dimen name="screen_horizontal_padding">32dp</dimen>
+    <dimen name="auth_form_horizontal_padding">64dp</dimen>
+</resources>

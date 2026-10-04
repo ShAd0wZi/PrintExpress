@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" 
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name=".PrintXpressApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PrintXpress">
+
+        <!-- Authentication -->
+        <activity android:name=".ui.auth.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".ui.auth.LoginActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.auth.RegisterActivity"
+            android:exported="false" />
+
+        <activity android:name=".ui.auth.ForgotPasswordActivity"
+            android:exported="false" />
+
+        <!-- Home -->
+        <activity android:name=".ui.home.HomeActivity"
+            android:exported="false" />
+
+        <!-- Product Browsing -->
+        <activity android:name=".ui.product.CategoryListActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.product.ProductListActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.product.ProductDetailActivity"
+            android:exported="false" />
+
+        <!-- Order Flow -->
+        <activity android:name=".ui.order.CartActivity"
+            android:exported="false" />
+            
+        <activity android:name=".ui.order.CustomisationActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.order.ArtworkUploadActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.order.DeliverySelectionActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.order.PaymentActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.order.OrderSummaryActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.order.OrderConfirmationActivity"
+            android:exported="false" />
+
+        <!-- Order Management -->
+        <activity android:name=".ui.order.OrderHistoryActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.order.OrderDetailActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.order.OrderTrackingActivity"
+            android:exported="false" />
+
+        <!-- Profile -->
+        <activity android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.profile.EditProfileActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.profile.SavedAddressesActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.profile.AddAddressActivity"
+            android:exported="false" />
+
+        <!-- Support -->
+        <activity android:name=".ui.support.DesignGuidelinesActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.support.FAQActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.support.PromotionsActivity"
+            android:exported="false" />
+        
+        <activity android:name=".ui.support.NotificationsActivity"
+            android:exported="false" />
+
+        <!-- Admin Dashboard -->
+        <activity android:name=".ui.admin.AdminDashboardActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+</manifest>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== PrintXpress Premium Design System Tokens (Dark Mode) ===== -->
+
+    <!-- Surface & Canvas Tokens (Modern Slate & Onyx, zero mud) -->
+    <color name="surface">#0F172A</color>
+    <color name="surface_dim">#0B1120</color>
+    <color name="surface_bright">#1E293B</color>
+    <color name="surface_container_lowest">#0F172A</color>
+    <color name="surface_container_low">#141E33</color>
+    <color name="surface_container">#1E293B</color>
+    <color name="surface_container_high">#243248</color>
+    <color name="surface_container_highest">#2C3C56</color>
+    <color name="surface_variant">#1E293B</color>
+    <color name="inverse_surface">#F8F9FA</color>
+    <color name="inverse_on_surface">#0F172A</color>
+    <color name="background">#0F172A</color>
+    <color name="on_background">#F9FAFB</color>
+
+    <!-- Content & Outline Tokens -->
+    <color name="on_surface">#F9FAFB</color>
+    <color name="on_surface_variant">#94A3B8</color>
+    <color name="outline">#64748B</color>
+    <color name="outline_variant">#243248</color>
+
+    <!-- Primary Brand (Vibrant Accessible Emerald in Dark Mode) -->
+    <color name="primary">#34D399</color>
+    <color name="on_primary">#064E3B</color>
+    <color name="primary_container">#059669</color>
+    <color name="on_primary_container">#FFFFFF</color>
+    <color name="inverse_primary">#059669</color>
+    <color name="primary_fixed">#064E3B</color>
+    <color name="primary_fixed_dim">#047857</color>
+    <color name="on_primary_fixed">#D1FAE5</color>
+    <color name="on_primary_fixed_variant">#A7F3D0</color>
+    <color name="surface_tint">#34D399</color>
+
+    <!-- Direct Emerald Tokens -->
+    <color name="brand_emerald">#34D399</color>
+    <color name="brand_emerald_dark">#059669</color>
+    <color name="brand_emerald_light">#064E3B</color>
+    <color name="brand_emerald_ultra_light">#022C22</color>
+
+    <!-- Direct Surfaces & Typography -->
+    <color name="canvas">#0F172A</color>
+    <color name="card_white">#1E293B</color>
+    <color name="card_tinted">#141E33</color>
+    <color name="border_soft">#243248</color>
+    <color name="border_ultra_soft">#1A2538</color>
+    <color name="text_onyx">#F9FAFB</color>
+    <color name="text_slate">#94A3B8</color>
+    <color name="text_muted">#64748B</color>
+    <color name="text_inverse">#0F172A</color>
+
+    <!-- Secondary / Urgent Accent (Warm Amber in Dark Mode) -->
+    <color name="secondary">#FBBF24</color>
+    <color name="on_secondary">#78350F</color>
+    <color name="secondary_container">#78350F</color>
+    <color name="on_secondary_container">#FEF3C7</color>
+    <color name="secondary_fixed">#451A03</color>
+    <color name="secondary_fixed_dim">#78350F</color>
+    <color name="on_secondary_fixed">#FEF3C7</color>
+    <color name="on_secondary_fixed_variant">#FDE68A</color>
+
+    <!-- Tertiary (Eco Mint in Dark Mode) -->
+    <color name="tertiary">#4ADE80</color>
+    <color name="on_tertiary">#052E16</color>
+    <color name="tertiary_container">#166534</color>
+    <color name="on_tertiary_container">#DCFCE7</color>
+    <color name="tertiary_fixed">#052E16</color>
+    <color name="tertiary_fixed_dim">#166534</color>
+    <color name="on_tertiary_fixed">#DCFCE7</color>
+    <color name="on_tertiary_fixed_variant">#BBF7D0</color>
+
+    <!-- Error Tokens -->
+    <color name="error">#F87171</color>
+    <color name="on_error">#450A0A</color>
+    <color name="error_container">#7F1D1D</color>
+    <color name="on_error_container">#FEE2E2</color>
+
+    <!-- Production Lifecycle Status Tokens -->
+    <color name="status_pending_bg">#451A03</color>
+    <color name="status_pending_text">#FDE68A</color>
+    <color name="status_processing_bg">#1E3A8A</color>
+    <color name="status_processing_text">#BFDBFE</color>
+    <color name="status_printing_bg">#431407</color>
+    <color name="status_printing_text">#FED7AA</color>
+    <color name="status_ready_bg">#064E3B</color>
+    <color name="status_ready_text">#A7F3D0</color>
+    <color name="status_completed_bg">#1E293B</color>
+    <color name="status_completed_text">#CBD5E1</color>
+    <color name="status_cancelled_bg">#450A0A</color>
+    <color name="status_cancelled_text">#FECACA</color>
+
+    <!-- Modern Status Chips -->
+    <color name="chip_express_bg">#451A03</color>
+    <color name="chip_express_text">#FDE68A</color>
+    <color name="chip_success_bg">#064E3B</color>
+    <color name="chip_success_text">#A7F3D0</color>
+    <color name="chip_pending_bg">#451A03</color>
+    <color name="chip_pending_text">#FDE68A</color>
+    <color name="chip_info_bg">#1E3A8A</color>
+    <color name="chip_info_text">#BFDBFE</color>
+
+    <!-- Premium Dark Gradient Endpoints -->
+    <color name="gradient_dark_start">#0B1120</color>
+    <color name="gradient_dark_mid">#0F172A</color>
+    <color name="gradient_dark_end">#1E293B</color>
+
+    <!-- Legacy & Compatibility Aliases -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_dark">#047857</color>
+    <color name="primary_light">#34D399</color>
+    <color name="accent">#FBBF24</color>
+    <color name="accent_light">#78350F</color>
+    <color name="accent_dark">#F59E0B</color>
+    <color name="accent_container">#451A03</color>
+    <color name="background_light">#141E33</color>
+    <color name="surface_light">#1E293B</color>
+    <color name="text_primary">#F9FAFB</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_hint">#64748B</color>
+    <color name="divider">#243248</color>
+    <color name="card_stroke">#243248</color>
+    <color name="success">#34D399</color>
+    <color name="success_container">#064E3B</color>
+    <color name="warning">#FBBF24</color>
+    <color name="warning_container">#451A03</color>
+    <color name="info">#60A5FA</color>
+    <color name="info_container">#1E3A8A</color>
+    <color name="primary_gradient_start">#059669</color>
+    <color name="primary_gradient_end">#34D399</color>
+    <color name="overlay_dark">#B3000000</color>
+    <color name="overlay_light">#26FFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Legacy Material colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+</resources>

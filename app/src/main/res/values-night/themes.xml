@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- ===== PrintXpress Dark Theme ===== -->
+    <style name="Theme.PrintXpress" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+
+        <!-- Secondary brand color (Orange accent) -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_fixed_dim</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+
+        <!-- Tertiary: Functional Green -->
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
+
+        <!-- Surface and background -->
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_container_high</item>
+        <item name="android:colorBackground">@color/surface</item>
+        <item name="colorOnBackground">@color/on_surface</item>
+
+        <!-- Error state -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        <item name="colorErrorContainer">@color/error_container</item>
+        <item name="colorOnErrorContainer">@color/on_error_container</item>
+
+        <!-- Status bar: Dark style with light icons -->
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+
+        <!-- Shape ergonomics: 8dp small, 12dp medium (buttons/inputs), 16dp large (cards) -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.PrintXpress.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.PrintXpress.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.PrintXpress.LargeComponent</item>
+
+        <!-- Typography: Plus Jakarta Sans -->
+        <item name="fontFamily">@font/font_family_brand</item>
+        <item name="android:fontFamily">@font/font_family_brand</item>
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.PrintXpress.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.PrintXpress.HeadlineMedium</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.PrintXpress.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.PrintXpress.TitleMedium</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.PrintXpress.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.PrintXpress.BodyMedium</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.PrintXpress.LabelLarge</item>
+
+        <!-- Button style -->
+        <item name="materialButtonStyle">@style/Widget.PrintXpress.Button.Primary</item>
+
+        <!-- Bottom navigation -->
+        <item name="bottomNavigationStyle">@style/Widget.PrintXpress.BottomNavigationView</item>
+
+        <!-- Card style -->
+        <item name="materialCardViewStyle">@style/Widget.PrintXpress.CardView</item>
+
+        <!-- TextInputLayout -->
+        <item name="textInputStyle">@style/Widget.PrintXpress.TextInputLayout</item>
+    </style>
+
+    <!-- ===== Splash Theme (Dark) ===== -->
+    <style name="Theme.PrintXpress.Splash" parent="Theme.PrintXpress">
+        <item name="android:statusBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+        <item name="android:windowBackground">@color/surface</item>
+    </style>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <!-- Background -->
+    <path android:fillColor="#E2E7FF" android:pathData="M0,0h320v180h-320z" />
+    <!-- Back Leaflet Sheet -->
+    <path android:fillColor="#C4C5D7" android:pathData="M126,20h92v132h-92z" />
+    <path android:fillColor="#F2F3FF" android:pathData="M122,16h92v132h-92z" />
+    <!-- Front A5 Flyer -->
+    <path android:fillColor="#FFFFFF" android:pathData="M98,26h96v134h-96z" />
+    <!-- Hero Header on Flyer -->
+    <path android:fillColor="#1F4FD8" android:pathData="M98,26h96v46h-96z" />
+    <path android:fillColor="#FF7A1B" android:pathData="M108,36h36v10h-36z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M108,52h70v7h-70z" />
+    <!-- Flyer Columns & Callouts -->
+    <path android:fillColor="#DCE1FF" android:pathData="M108,82h34v32h-34z" />
+    <path android:fillColor="#DCE1FF" android:pathData="M150,82h34v32h-34z" />
+    <path android:fillColor="#131B2E" android:pathData="M108,122h76v6h-76z" />
+    <path android:fillColor="#747686" android:pathData="M108,133h64v4h-64z" />
+    <path android:fillColor="#006C30" android:pathData="M108,143h44v9h-44z" />
+</vector>

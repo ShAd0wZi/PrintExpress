@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">PrintXpress</string>
+    
+    <!-- Authentication -->
+    <string name="welcome">Welcome to PrintXpress</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="skip_for_now">Skip for now</string>
+    <string name="reset_password">Reset Password</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_orders">Orders</string>
+    <string name="nav_cart">Cart</string>
+    <string name="nav_profile">Profile</string>
+    
+    <!-- Order Flow -->
+    <string name="customise">Customise</string>
+    <string name="upload_artwork">Upload Artwork</string>
+    <string name="delivery">Delivery</string>
+    <string name="pickup">Pickup</string>
+    <string name="payment">Payment</string>
+    <string name="confirm_order">Confirm Order</string>
+
+    <!-- Accessibility & Content Descriptions -->
+    <string name="cd_back">Navigate back</string>
+    <string name="cd_notifications">Notifications</string>
+    <string name="cd_profile">User profile</string>
+    <string name="cd_delete_address">Delete address</string>
+    <string name="cd_remove_cart_item">Remove item from cart</string>
+    <string name="cd_product_image">Product preview image</string>
+    <string name="cd_category_icon">Category icon</string>
+
+    <!-- Empty & Loading States -->
+    <string name="empty_categories">No categories match your search.</string>
+    <string name="empty_products">No print products found in this category.</string>
+    <string name="empty_cart">Your cart is currently empty</string>
+    <string name="empty_orders">No Orders in Queue</string>
+    <string name="empty_addresses">No saved delivery addresses yet. Tap below to add one.</string>
+    <string name="empty_promotions">No promotions currently active. Check back soon for exclusive print offers!</string>
+
+    <!-- Common Actions & Labels -->
+    <string name="see_all">See All</string>
+    <string name="track_order">Track Order</string>
+    <string name="proceed_to_delivery">Proceed to Delivery</string>
+    <string name="cart_total_label">Cart Total</string>
+    <string name="browse_categories">Browse Categories</string>
+    
+    <!-- Arrays -->
+    <string-array name="sizes">
+        <item>Select Size</item>
+        <item>A4</item>
+        <item>A5</item>
+        <item>A6</item>
+        <item>A7</item>
+        <item>A8</item>
+    </string-array>
+    
+    <string-array name="materials">
+        <item>Select Material</item>
+        <item>Glossy</item>
+        <item>Matte</item>
+        <item>Satin</item>
+    </string-array>
+
+    <string-array name="print_hubs">
+        <item>Colombo 03 — Heidelberg Offset Hub (★ 4.9 • 24h Express)</item>
+        <item>Kelaniya — Konica Digital Press Hub (★ 4.7 • Eco Saver -8%)</item>
+        <item>Kandy — Central Regional Print Hub (★ 4.8 • Outstation -4%)</item>
+    </string-array>
+</resources>

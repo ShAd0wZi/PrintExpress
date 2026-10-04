@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#001551", "on-surface": "#131b2e", "error": "#ba1a1a", "on-primary-fixed-variant": "#0039b5", "primary": "#0037b1", "primary-container": "#1f4fd8", "on-background": "#131b2e", "surface-container-high": "#e2e7ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#00210a", "on-secondary-container": "#5e2700", "secondary-fixed-dim": "#ffb68e", "on-secondary": "#ffffff", "on-surface-variant": "#434655", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "primary-fixed-dim": "#b7c4ff", "surface-container": "#eaedff", "on-error": "#ffffff", "tertiary-fixed": "#95f8a7", "surface": "#faf8ff", "on-secondary-fixed-variant": "#773300", "secondary": "#9c4500", "secondary-fixed": "#ffdbca", "inverse-surface": "#283044", "on-tertiary-fixed-variant": "#005323", "inverse-on-surface": "#eef0ff", "background": "#faf8ff", "surface-container-highest": "#dae2fd", "surface-variant": "#dae2fd", "on-primary-container": "#ccd4ff", "surface-bright": "#faf8ff", "on-secondary-fixed": "#331200", "primary-fixed": "#dce1ff", "tertiary": "#005122", "surface-tint": "#2251da", "inverse-primary": "#b7c4ff", "outline-variant": "#c4c5d7", "tertiary-container": "#006c30", "surface-container-low": "#f2f3ff", "secondary-container": "#ff7a1b", "surface-dim": "#d2d9f4", "outline": "#747686", "on-error-container": "#93000a", "tertiary-fixed-dim": "#79db8d", "on-tertiary-container": "#89ec9b", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "1rem", "space-md": "1rem" }, "fontFamily": { "headline-lg": ["Inter"], "label-lg": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "16px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "fontWeight": "500" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] -ml-2 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="PrintXpress modern commercial print shop logo icon, sleek stylized geometric letter P with overlapping CMYK dynamic print sheets and vibrant deep blue #1F4FD8 and warm orange #FF7A1A accents on clean background. Brand logo. - Primary color: #1f4fd8
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1UuVI51mR8aomExe7Q2z06-CK_K2MFhtx_PwOpgHxVK3YxG6AlifjBC7kZw0_1MsrxRWMo9MC2YhDpGNg7meBi3s_74o9fewm5HT5Y_sH0_xVqrrp1lmC5AYaKPqeMgEhqtQbJmt6SuhkoU7Di5-6fWPZRROCpmOgIWdBxy4YNNaKlsvMyNmfgCa_Xv9CvrK_pz6oew6Svrs-BRfvxH3rPX1QEAWODoAH4tWBlT1lNEo-pMovplcBNepQnj"/><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider truncate">PrintXpress</span><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Delivery And Pickup</h1></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Help and Specifications Support" class="min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">help_outline</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1 flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-32">
+<!-- Step Indicator & Header Block -->
+<div class="px-margin pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Step 5 of 5: Order Summary</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 100% Complete
+      </span>
+</div>
+<!-- 5 Segment Progress Bar -->
+<div class="grid grid-cols-5 gap-1.5 w-full my-1">
+<div class="h-1.5 rounded-full bg-primary-container"></div>
+<div class="h-1.5 rounded-full bg-primary-container"></div>
+<div class="h-1.5 rounded-full bg-primary-container"></div>
+<div class="h-1.5 rounded-full bg-primary-container"></div>
+<div class="h-1.5 rounded-full bg-primary-container animate-pulse"></div>
+</div>
+<div class="mt-1">
+<h2 class="font-headline-md text-headline-md text-on-surface">Review Your Order</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Double check your print specs, files, and shipping details before final confirmation.</p>
+</div>
+</div>
+<!-- Cards Container -->
+<div class="px-margin flex flex-col gap-space-md">
+<!-- Card 1: Print Items -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(31,79,216,0.06),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">print</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Print Items</h3>
+</div>
+<button aria-label="Edit print items" class="px-3 py-1 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container transition-colors flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<!-- Item Profile -->
+<div class="flex gap-space-sm items-start mt-1">
+<img alt="Premium matte business cards sample" class="w-18 h-18 w-[72px] h-[72px] rounded-lg object-cover flex-shrink-0 shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1WeeFbv_PvaGzNIU78Xa1yF1RUf-hv-1j89VahORLEGJqboRtF1DnCbH3GIQYyuiyYjIn_hSV126FM00k_sXOQzUNENPXl3ob89LuiI28MB3s7FRY22d7hqwOzzprmz5NrjmCKcViqDins1C8JLiVXbSlNa_BRiozsBxXOfDV-4HHx_phCfqBTGScnTppxb4W6D1BH8BRCVAvVRO3bCDk-0BxnEk-Ykl1zPeOHAK_wcQDm-xZ7JMa9-QX8Z"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Premium Matte Business Cards</span>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="font-semibold text-on-surface">500 pcs</span>
+<span>•</span>
+<span>Rs. 5.00 / pc</span>
+</div>
+<div class="mt-1.5 self-start inline-flex items-center gap-1 bg-surface-container text-on-primary-container px-2 py-0.5 rounded-md font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-tertiary">verified</span>
+<span>Pre-flight Checked</span>
+</div>
+</div>
+</div>
+<!-- Technical Specifications Chips/Table -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-2 mt-1">
+<div class="flex justify-between items-baseline gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex-shrink-0">Finished Size:</span>
+<span class="font-body-sm text-body-sm text-on-surface text-right font-medium">A5 (148 × 210 mm) Standard</span>
+</div>
+<div class="flex justify-between items-baseline gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex-shrink-0">Stock &amp; Finish:</span>
+<span class="font-body-sm text-body-sm text-on-surface text-right font-medium">350gsm Matte + Silky Coating</span>
+</div>
+<div class="flex justify-between items-baseline gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex-shrink-0">Color Mode:</span>
+<span class="font-body-sm text-body-sm text-on-surface text-right font-medium">Double-Sided Full Color (4/4 CMYK)</span>
+</div>
+<div class="flex flex-col gap-0.5 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Custom Instructions:</span>
+<div class="bg-surface-container-lowest rounded p-2 text-on-surface-variant font-body-sm text-body-sm italic">
+            "Please trim with 3mm rounded corners, leave matte bleed for stamping"
+          </div>
+</div>
+</div>
+<!-- Attached File Banner -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-error-container text-error flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-label-md text-on-surface truncate">business_card_front_print_ready.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4.2 MB • 300 DPI CMYK Ready</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</div>
+<div class="flex justify-between items-center pt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Item Subtotal</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Rs. 2,500</span>
+</div>
+</div>
+<!-- Card 2: Delivery Details -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(31,79,216,0.06),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Delivery Details</h3>
+</div>
+<button aria-label="Edit delivery details" class="px-3 py-1 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container transition-colors flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-2.5">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">electric_moped</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Doorstep Courier Delivery (Colombo Express)</span>
+<span class="font-body-sm text-body-sm text-tertiary font-medium">Estimated Tomorrow before 5:00 PM</span>
+</div>
+</div>
+<div class="flex items-start gap-2 pt-1">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5">location_on</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface leading-tight">No. 42, Galle Road, Kollupitiya, Colombo 03</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Western Province, Sri Lanka</span>
+</div>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5">person</span>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface">Kamal Perera</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+94 77 123 4567</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Delivery Fee</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Rs. 300</span>
+</div>
+</div>
+<!-- Card 3: Payment Method -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(31,79,216,0.06),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">credit_card</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Payment Method</h3>
+</div>
+<button aria-label="Edit payment method" class="px-3 py-1 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container transition-colors flex items-center gap-1 font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[15px]">edit</span>
+<span>Edit</span>
+</button>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low rounded-lg p-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-8 rounded bg-surface-container-lowest flex items-center justify-center font-bold text-primary text-sm shadow-sm tracking-tighter">
+            VISA
+          </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-wider">Visa ending in • 4242</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kamal Perera</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-tertiary bg-surface-container-lowest px-2 py-1 rounded shadow-sm">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+<span class="font-label-sm text-label-sm font-semibold">256-bit</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Price Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(31,79,216,0.06),0_2px_6px_-1px_rgba(0,0,0,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Price Breakdown</h3>
+</div>
+<div class="flex flex-col gap-2 pt-1 font-body-sm text-body-sm">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Items Subtotal (500 pcs)</span>
+<span class="text-on-surface font-medium">Rs. 2,500</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Islandwide Delivery Fee</span>
+<span class="text-on-surface font-medium">Rs. 300</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="flex items-center gap-1">
+            Commercial Tax &amp; Pre-flight Proofing
+            <span class="material-symbols-outlined text-tertiary text-[16px]">verified</span>
+</span>
+<span class="text-tertiary font-semibold">FREE (Rs. 0)</span>
+</div>
+</div>
+<!-- Accent Divider Line via background shift -->
+<div class="h-0.5 w-full bg-surface-container my-1"></div>
+<div class="flex justify-between items-baseline pt-1">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Total Amount</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(Incl. 18% SSCL &amp; VAT exempt)</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-bold tracking-tight">
+          Rs. 2,800
+        </div>
+</div>
+</div>
+<!-- Production Guarantee Note -->
+<div class="bg-surface-container rounded-xl p-space-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">PrintXpress Guarantee:</strong> Any printing defect or misalignment from file specs will be re-printed free of charge within 24 hours.
+      </p>
+</div>
+</div>
+<!-- Persistent Docked Bottom Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_rgba(0,0,0,0.06)] px-margin py-space-sm pb-safe flex flex-col gap-1.5 items-center">
+<button class="w-full h-[52px] rounded-xl bg-primary hover:bg-primary-container active:scale-[0.99] text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md transition-all" id="confirmOrderBtn" type="button">
+<span>Confirm Order • Rs. 2,800</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center px-2">
+      By tapping Confirm Order, you agree to PrintXpress Commercial Proofing &amp; Print Terms
+    </p>
+</div>
+</div>
+<script>
+  (function() {
+    const btn = document.getElementById('confirmOrderBtn');
+    if (!btn) return;
+    btn.addEventListener('click', function() {
+      const originalContent = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `
+        <span class="inline-block animate-spin mr-2">
+          <span class="material-symbols-outlined text-[20px]">autorenew</span>
+        </span>
+        <span>Securing Order Token...</span>
+      `;
+      setTimeout(() => {
+        btn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px]">check_circle</span>
+          <span>Order Confirmed!</span>
+        `;
+        btn.classList.remove('bg-primary');
+        btn.classList.add('bg-tertiary');
+      }, 1200);
+    });
+  })();
+</script></main></body></html>

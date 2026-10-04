@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <!-- Background -->
+    <path android:fillColor="#EAEDFF" android:pathData="M0,0h320v180h-320z" />
+    <!-- T-Shirt Silhouette -->
+    <path
+        android:fillColor="#1F4FD8"
+        android:pathData="M128,24l-42,24l16,28l22,-11v91h72V65l22,11l16,-28l-42,-24c-4,12 -16,18 -32,18S132,36 128,24z" />
+    <!-- Collar Trim -->
+    <path
+        android:fillColor="#0037B1"
+        android:pathData="M134,26c5,10 14,15 26,15s21,-5 26,-15h-8c-4,6 -10,9 -18,9s-14,-3 -18,-9H134z" />
+    <!-- Chest Custom Graphic Print Box -->
+    <path android:fillColor="#FFFFFF" android:pathData="M138,62h44v44h-44z" />
+    <path android:fillColor="#FF7A1B" android:pathData="M146,70h28v12h-28z" />
+    <path android:fillColor="#0037B1" android:pathData="M146,88h28v5h-28z" />
+    <path android:fillColor="#747686" android:pathData="M150,96h20v4h-20z" />
+</vector>

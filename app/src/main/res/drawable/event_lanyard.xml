@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+    <!-- Background -->
+    <path android:fillColor="#E2E7FF" android:pathData="M0,0h320v180h-320z" />
+    <!-- Lanyard Ribbon Strap -->
+    <path android:fillColor="#0037B1" android:pathData="M136,0l18,46h12l18,-46h-14l-10,28L150,0z" />
+    <!-- Metal Clip -->
+    <path android:fillColor="#747686" android:pathData="M152,46h16v10h-16z" />
+    <!-- PVC Pass Card -->
+    <path android:fillColor="#FFFFFF" android:pathData="M116,54h88v110h-88z" />
+    <path android:fillColor="#1F4FD8" android:pathData="M116,54h88v26h-88z" />
+    <path android:fillColor="#EAEDFF" android:pathData="M148,60h24v5h-24z" />
+    <!-- Avatar Circle & Details -->
+    <path
+        android:fillColor="#DCE1FF"
+        android:pathData="M160,102m-16,0a16,16 0,1 1,32 0a16,16 0,1 1,-32 0" />
+    <path android:fillColor="#131B2E" android:pathData="M132,126h56v7h-56z" />
+    <path android:fillColor="#FF7A1B" android:pathData="M138,140h44v12h-44z" />
+</vector>
