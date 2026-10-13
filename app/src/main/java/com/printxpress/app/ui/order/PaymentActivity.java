@@ -61,7 +61,8 @@ public class PaymentActivity extends AppCompatActivity {
             binding.tvQrTotalAmount.setText(SessionManager.formatPrice(this, grandTotal));
         }
         if (binding.tvQrReference != null) {
-            long refNum = (System.currentTimeMillis() % 900000L) + 100000L;
+            int seed = Math.abs((userId * 31 + (deliveryMethod != null ? deliveryMethod.hashCode() : 0) + (int) (grandTotal * 100) + singleCartItemId));
+            long refNum = (seed % 900000L) + 100000L;
             binding.tvQrReference.setText("REF: LK-PX-" + refNum);
         }
         

@@ -383,17 +383,17 @@ public class ProfileActivity extends AppCompatActivity {
             }
 
             if (isAdmin) {
-                // Admin State: Dedicated system admin badge, portal access, hide consumer spend and self-deletion
+                // Admin State: Dedicated system admin badge, portal access, hide consumer spend and GDPR controls
                 binding.tvProfileBadge.setText("System Administrator");
                 binding.tvProfileBadge.setBackgroundResource(R.drawable.bg_badge_ready);
                 binding.tvProfileBadge.setTextColor(ContextCompat.getColor(this, R.color.status_ready_text));
                 binding.btnAdminDashboard.setVisibility(View.VISIBLE);
                 binding.layoutCustomerAnalytics.setVisibility(View.GONE);
-                binding.layoutGdprSection.setVisibility(View.VISIBLE);
+                binding.layoutGdprSection.setVisibility(View.GONE);
                 binding.btnDeleteAccount.setVisibility(View.GONE);
             } else {
-                // Customer State: Commercial pro badge, full analytics and GDPR
-                binding.tvProfileBadge.setText("Commercial Pro");
+                // Customer State: Verified customer badge, full analytics and GDPR
+                binding.tvProfileBadge.setText("Verified Customer");
                 binding.tvProfileBadge.setBackgroundResource(R.drawable.bg_pill_accent);
                 binding.tvProfileBadge.setTextColor(ContextCompat.getColor(this, R.color.secondary));
                 binding.btnAdminDashboard.setVisibility(View.GONE);

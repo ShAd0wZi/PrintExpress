@@ -111,7 +111,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:gravity="center"
-                                    android:text="P"
+                                    android:text=""
+                                    tools:text="P"
                                     android:textColor="@color/primary"
                                     android:textSize="26sp"
                                     android:textStyle="bold" />
@@ -274,6 +275,7 @@
                 android:layout_marginBottom="16dp"
                 android:clickable="true"
                 android:focusable="true"
+                android:visibility="gone"
                 app:cardBackgroundColor="@color/surface_container_lowest"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="0dp"
@@ -591,7 +593,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Design Guidelines"
+                                android:text="Artwork Preparation Guide"
                                 android:textColor="@color/on_surface"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
@@ -599,7 +601,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Bleed, 300 DPI, CMYK color profiles"
+                                android:text="File specs, Bleed, 300 DPI, CMYK color"
                                 android:textColor="@color/on_surface_variant"
                                 android:textSize="11sp" />
                         </LinearLayout>
@@ -1098,7 +1100,7 @@
                         android:layout_height="48dp"
                         android:layout_marginEnd="6dp"
                         android:layout_weight="1"
-                        android:text="Export Data (JSON)"
+                        android:text="Download My Data"
                         android:textSize="12sp"
                         app:cornerRadius="12dp" />
 
@@ -1129,7 +1131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:text="PrintXpress Pro v2.4 • Colombo Industrial Works"
+                android:text="PrintXpress Pro • Version 2.4"
                 android:textColor="@color/text_hint"
                 android:textSize="11sp" />
 

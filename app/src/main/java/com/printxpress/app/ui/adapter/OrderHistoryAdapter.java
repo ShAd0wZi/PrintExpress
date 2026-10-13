@@ -51,7 +51,7 @@ public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapte
         holder.tvOrderId.setText("Order #" + order.getOrderId());
         
         String status = order.getOrderStatus() != null ? order.getOrderStatus() : "PENDING";
-        holder.tvOrderStatus.setText(status);
+        holder.tvOrderStatus.setText(com.printxpress.app.util.Constants.formatOrderStatus(status));
         
         // Status color coding preserving rounded badge background and dark mode contrast
         ContextCompat.getColor(holder.itemView.getContext(), R.color.status_pending_bg);

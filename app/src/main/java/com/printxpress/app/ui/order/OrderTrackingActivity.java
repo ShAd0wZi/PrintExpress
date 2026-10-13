@@ -64,7 +64,7 @@ public class OrderTrackingActivity extends AppCompatActivity {
 
     private void renderTimeline(int orderId, String status, Order order, String itemsSummary) {
         if (status == null) status = "PENDING";
-        binding.tvOrderId.setText("Tracking Order #" + orderId + " (" + status + ")");
+        binding.tvOrderId.setText("Tracking Order #" + orderId + " (" + com.printxpress.app.util.Constants.formatOrderStatus(status) + ")");
 
         // Update Press Job Summary Card
         if (order != null && order.getOrderDate() != null) {

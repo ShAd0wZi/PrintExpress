@@ -99,6 +99,15 @@ public class PromotionsActivity extends AppCompatActivity {
         });
 
         boolean isAdmin = com.printxpress.app.util.SessionManager.isAdmin(this);
+        TextView tvPromoSubtitle = findViewById(R.id.tvPromoSubtitle);
+        if (tvPromoSubtitle != null) {
+            if (isAdmin) {
+                tvPromoSubtitle.setText("Tap a promo to copy code • Long-press to delete");
+            } else {
+                tvPromoSubtitle.setText("Tap any promotion code to copy to clipboard");
+            }
+        }
+
         if (btnAddPromo != null) {
             btnAddPromo.setVisibility(isAdmin ? View.VISIBLE : View.GONE);
             btnAddPromo.setOnClickListener(v -> {

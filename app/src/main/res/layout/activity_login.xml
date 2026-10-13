@@ -179,7 +179,7 @@
                             android:id="@+id/etPassword"
                             android:layout_width="match_parent"
                             android:layout_height="50dp"
-                            android:hint="••••••••"
+                            android:hint="Enter your password"
                             android:inputType="textPassword"
                             android:textColor="@color/on_surface"
                             android:textSize="14sp" />

@@ -143,8 +143,7 @@ public class SessionManager {
     }
 
     public static boolean isAdmin(Context context) {
-        return Constants.USER_TYPE_ADMIN.equalsIgnoreCase(getUserType(context))
-                || "admin@printxpress.lk".equalsIgnoreCase(getUserEmail(context));
+        return Constants.USER_TYPE_ADMIN.equalsIgnoreCase(getUserType(context));
     }
 
     public static void saveUserSession(Context context, User user) {

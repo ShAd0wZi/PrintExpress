@@ -44,6 +44,27 @@ public final class Constants {
     public static final String STATUS_COMPLETED = "COMPLETED";
     public static final String STATUS_CANCELLED = "CANCELLED";
 
+    public static String formatOrderStatus(String status) {
+        if (status == null || status.trim().isEmpty()) {
+            return "Pending";
+        }
+        switch (status.toUpperCase()) {
+            case STATUS_PROCESSING:
+                return "In Production";
+            case STATUS_PRINTING:
+                return "Printing";
+            case STATUS_READY:
+                return "Ready";
+            case STATUS_COMPLETED:
+                return "Completed";
+            case STATUS_CANCELLED:
+                return "Cancelled";
+            case STATUS_PENDING:
+            default:
+                return "Pending";
+        }
+    }
+
     // User Type & Payment Status Constants
     public static final String USER_TYPE_CUSTOMER = "CUSTOMER";
     public static final String USER_TYPE_ADMIN = "ADMIN";

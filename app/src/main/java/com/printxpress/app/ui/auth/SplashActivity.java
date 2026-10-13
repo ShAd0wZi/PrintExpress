@@ -15,9 +15,14 @@ public class SplashActivity extends AppCompatActivity {
         if (isFinishing() || isDestroyed()) {
             return;
         }
-        // Deferred Authentication: Always allow guests to browse the home and products.
-        // Login will be prompted only when checking out or accessing the profile.
-        Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
+        Intent intent;
+        if (com.printxpress.app.util.SessionManager.isLoggedIn(SplashActivity.this)
+                && com.printxpress.app.util.SessionManager.isAdmin(SplashActivity.this)) {
+            intent = new Intent(SplashActivity.this, com.printxpress.app.ui.admin.AdminDashboardActivity.class);
+        } else {
+            // Deferred Authentication: Always allow guests/customers to browse the home and products.
+            intent = new Intent(SplashActivity.this, HomeActivity.class);
+        }
         startActivity(intent);
         finish();
     };

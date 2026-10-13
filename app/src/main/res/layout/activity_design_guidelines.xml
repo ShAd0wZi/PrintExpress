@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@color/surface"
-        app:title="Design Guidelines"
+        app:title="Artwork Preparation Guide"
         app:titleTextColor="@color/on_surface"
         app:navigationIcon="@drawable/ic_arrow_left"
         app:navigationIconTint="@color/on_surface"

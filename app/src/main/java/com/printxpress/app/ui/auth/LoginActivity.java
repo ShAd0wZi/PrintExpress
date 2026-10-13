@@ -45,11 +45,11 @@ public class LoginActivity extends AppCompatActivity {
         viewModel.getLoginMessage().observe(this, message -> {
             if (message != null && !message.isEmpty()) {
                 if (message.toLowerCase().contains("invalid")) {
-                    int failedCount = SessionManager.recordFailedLoginAttempt(this);
+                    SessionManager.recordFailedLoginAttempt(this);
                     long lockoutSecs = SessionManager.getRemainingLockoutSeconds(this);
                     String detailMsg = lockoutSecs > 0
-                            ? "Too many failed attempts! Locked for " + lockoutSecs + "s."
-                            : message + " (" + failedCount + "/" + SessionManager.MAX_FAILED_LOGIN_ATTEMPTS + " attempts)";
+                            ? "Too many failed attempts! Account temporarily locked for " + lockoutSecs + "s."
+                            : "Invalid email or password. Please try again.";
                     binding.etPassword.setError(detailMsg);
                     binding.etPassword.requestFocus();
                     com.printxpress.app.util.PrintXpressToast.error(this, detailMsg);
@@ -66,10 +66,13 @@ public class LoginActivity extends AppCompatActivity {
                 SessionManager.saveUserSession(this, user);
                 if ("ADMIN".equalsIgnoreCase(user.getUserType())) {
                     com.printxpress.app.util.PrintXpressToast.success(this, "Welcome Admin! Opening Admin Dashboard...");
-                    startActivity(new Intent(this, HomeActivity.class));
-                    startActivity(new Intent(this, com.printxpress.app.ui.admin.AdminDashboardActivity.class));
+                    Intent intent = new Intent(this, com.printxpress.app.ui.admin.AdminDashboardActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
                 } else {
-                    startActivity(new Intent(this, HomeActivity.class));
+                    Intent intent = new Intent(this, HomeActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
                 }
                 finish();
             }

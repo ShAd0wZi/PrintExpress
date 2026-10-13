@@ -42,7 +42,8 @@
             android:text="+ Add Promo"
             android:textColor="@color/primary"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="gone" />
     </LinearLayout>
 
     <!-- Summary Strip -->
@@ -92,10 +93,11 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tvPromoSubtitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    android:text="Tap a promo to copy code • Long-press to delete"
+                    android:text="Tap any promotion code to copy"
                     android:textColor="@color/on_surface_variant"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -106,7 +108,7 @@
                 android:background="@drawable/bg_pill_accent"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="4dp"
-                android:text="Live DB"
+                android:text="Verified Offers"
                 android:textColor="@color/secondary"
                 android:textSize="11sp"
                 android:textStyle="bold" />

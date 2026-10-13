@@ -348,7 +348,7 @@ public class HomeActivity extends AppCompatActivity {
             final Order orderToShow = activeOrder;
             binding.cvLiveJobSnippet.setVisibility(View.VISIBLE);
             binding.tvLiveOrderId.setText("Order #" + orderToShow.getOrderId());
-            binding.tvLiveOrderStatus.setText("• " + orderToShow.getOrderStatus());
+            binding.tvLiveOrderStatus.setText("• " + com.printxpress.app.util.Constants.formatOrderStatus(orderToShow.getOrderStatus()));
 
             View.OnClickListener trackListener = v -> {
                 Intent intent = new Intent(HomeActivity.this, OrderTrackingActivity.class);

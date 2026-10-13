@@ -61,7 +61,7 @@ public class OrderDetailActivity extends AppCompatActivity {
                 }
                 status = order.getOrderStatus();
                 boolean isAdmin = com.printxpress.app.util.SessionManager.isAdmin(this);
-                binding.tvStatus.setText("Status: " + status + (isAdmin ? " ✎" : ""));
+                binding.tvStatus.setText("Status: " + com.printxpress.app.util.Constants.formatOrderStatus(status) + (isAdmin ? " ✎" : ""));
                 loadOrderDetails(order);
             }
         });

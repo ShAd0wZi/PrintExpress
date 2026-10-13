@@ -62,8 +62,12 @@ public class AdminDashboardActivity extends AppCompatActivity {
         binding = ActivityAdminDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        db = PrintXpressDatabase.getDatabase(this);
-        binding.btnBack.setOnClickListener(v -> finish());
+        binding.btnBack.setOnClickListener(v -> {
+            if (isTaskRoot()) {
+                startActivity(new Intent(this, com.printxpress.app.ui.home.HomeActivity.class));
+            }
+            finish();
+        });
         com.printxpress.app.util.MotionUtils.applySpringTouch(binding.btnBack);
 
         orderViewModel = new ViewModelProvider(this).get(OrderViewModel.class);
@@ -270,9 +274,21 @@ public class AdminDashboardActivity extends AppCompatActivity {
             dialog.getWindow().setDimAmount(0.70f);
         }
 
-        dialogBinding.tvOrderNumberTitle.setText("Manage Press Order #" + order.getOrderId());
+        dialogBinding.tvOrderNumberTitle.setText("Manage Order #" + order.getOrderId());
         dialogBinding.tvOrderDetailsSub.setText("Customer #" + order.getCustomerId() + " • Total " + SessionManager.formatPrice(this, order.getTotalAmount()));
-        dialogBinding.tvCurrentStatusBadge.setText(order.getOrderStatus() != null ? order.getOrderStatus() : "PENDING");
+        PrintXpressDatabase.databaseWriteExecutor.execute(() -> {
+            com.printxpress.app.data.local.entity.User customer = db.userDao().getUserById(order.getCustomerId());
+            if (customer != null && customer.getName() != null && !customer.getName().trim().isEmpty()) {
+                String label = customer.getName() + " • Total " + SessionManager.formatPrice(this, order.getTotalAmount());
+                runOnUiThread(() -> {
+                    if (!isFinishing() && !isDestroyed()) {
+                        dialogBinding.tvOrderDetailsSub.setText(label);
+                    }
+                });
+            }
+        });
+
+        dialogBinding.tvCurrentStatusBadge.setText(com.printxpress.app.util.Constants.formatOrderStatus(order.getOrderStatus()));
 
         String currentStatus = order.getOrderStatus() != null ? order.getOrderStatus().toUpperCase() : "PROCESSING";
         switch (currentStatus) {
@@ -317,17 +333,18 @@ public class AdminDashboardActivity extends AppCompatActivity {
 
             final String finalStatus = targetStatus;
             orderViewModel.updateOrderStatus(order.getOrderId(), finalStatus);
+            String formattedStatus = com.printxpress.app.util.Constants.formatOrderStatus(finalStatus);
             PrintXpressDatabase.databaseWriteExecutor.execute(() -> {
                 Notification notif = new Notification();
                 notif.setUserId(order.getCustomerId());
-                notif.setTitle("Order #" + order.getOrderId() + " Status: " + finalStatus);
-                notif.setMessage("Press Admin updated your order #" + order.getOrderId() + " to " + finalStatus + ".");
+                notif.setTitle("Order #" + order.getOrderId() + ": " + formattedStatus);
+                notif.setMessage("Your order #" + order.getOrderId() + " is now " + formattedStatus.toLowerCase() + ".");
                 notif.setTimestamp(new Date());
                 notif.setRead(false);
                 notif.setType("ORDER");
                 db.notificationDao().insert(notif);
             });
-            com.printxpress.app.util.PrintXpressToast.success(this, "Order #" + order.getOrderId() + " updated to " + finalStatus);
+            com.printxpress.app.util.PrintXpressToast.success(this, "Order #" + order.getOrderId() + " updated to " + formattedStatus);
             dialog.dismiss();
         });
 

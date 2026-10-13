@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:letterSpacing="-0.02"
-                android:text="Order Queue"
+                android:text="My Orders"
                 android:textColor="@color/on_surface"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -48,7 +48,7 @@
             android:background="@drawable/bg_chip_neutral"
             android:paddingHorizontal="10dp"
             android:paddingVertical="4dp"
-            android:text="Live Track"
+            android:text="Live Tracking"
             android:textColor="@color/primary"
             android:textSize="11sp"
             android:textStyle="bold" />
@@ -187,7 +187,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="No Orders in Queue"
+            android:text="No Orders Yet"
             android:textColor="@color/on_surface"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -197,7 +197,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:gravity="center"
-            android:text="When you place commercial print orders, they'll appear here with live Heidelberg press tracking."
+            android:text="When you place orders, they will appear here with live production tracking."
             android:textColor="@color/on_surface_variant"
             android:textSize="13sp" />
     </LinearLayout>
