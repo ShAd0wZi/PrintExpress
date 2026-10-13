@@ -1,0 +1,108 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Clean white base canvas -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M0,0h100v100h-100z" />
+
+    <!-- TOP-LEFT FINDER PATTERN -->
+    <!-- Outer 7x7 -->
+    <path
+        android:fillColor="#111827"
+        android:pathData="M6,6h24v24h-24z" />
+    <!-- Inner 5x5 cut -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M9.5,9.5h17v17h-17z" />
+    <!-- Center 3x3 -->
+    <path
+        android:fillColor="#111827"
+        android:pathData="M13,13h10v10h-10z" />
+
+    <!-- TOP-RIGHT FINDER PATTERN -->
+    <!-- Outer 7x7 -->
+    <path
+        android:fillColor="#111827"
+        android:pathData="M70,6h24v24h-24z" />
+    <!-- Inner 5x5 cut -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M73.5,9.5h17v17h-17z" />
+    <!-- Center 3x3 -->
+    <path
+        android:fillColor="#111827"
+        android:pathData="M77,13h10v10h-10z" />
+
+    <!-- BOTTOM-LEFT FINDER PATTERN -->
+    <!-- Outer 7x7 -->
+    <path
+        android:fillColor="#111827"
+        android:pathData="M6,70h24v24h-24z" />
+    <!-- Inner 5x5 cut -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M9.5,73.5h17v17h-17z" />
+    <!-- Center 3x3 -->
+    <path
+        android:fillColor="#111827"
+        android:pathData="M13,77h10v10h-10z" />
+
+    <!-- TIMING PATTERNS -->
+    <path
+        android:fillColor="#111827"
+        android:pathData="M34,17h4v4h-4z M42,17h4v4h-4z M50,17h4v4h-4z M58,17h4v4h-4z M62,17h4v4h-4z
+                          M17,34h4v4h-4z M17,42h4v4h-4z M17,50h4v4h-4z M17,58h4v4h-4z M17,62h4v4h-4z" />
+
+    <!-- ALIGNMENT PATTERN (Bottom-Right) -->
+    <path
+        android:fillColor="#111827"
+        android:pathData="M72,72h16v16h-16z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M75,75h10v10h-10z" />
+    <path
+        android:fillColor="#111827"
+        android:pathData="M78,78h4v4h-4z" />
+
+    <!-- DENSE DATA MODULE MATRIX -->
+    <path
+        android:fillColor="#111827"
+        android:pathData="
+            M34,6h4v4h-4z M42,6h4v8h-4z M50,6h8v4h-8z M62,6h4v4h-4z
+            M34,10h8v4h-8z M46,10h4v4h-4z M54,10h4v4h-4z
+            M34,22h4v8h-4z M42,22h4v4h-4z M50,22h4v4h-4z M58,22h8v4h-8z
+            M38,26h8v4h-8z M50,26h4v4h-4z M62,26h4v4h-4z
+            M6,34h4v8h-4z M10,38h4v4h-4z M22,34h8v4h-8z M26,38h4v4h-4z
+            M34,34h4v4h-4z M42,34h4v8h-4z M54,34h8v4h-8z M66,34h4v4h-4z M74,34h4v8h-4z M82,34h12v4h-12z
+            M6,46h4v4h-4z M14,46h4v8h-4z M22,46h8v4h-8z M30,50h4v4h-4z
+            M34,42h4v4h-4z M46,42h8v4h-8z M58,42h4v8h-4z M70,42h8v4h-8z M86,42h8v4h-8z
+            M34,46h4v4h-4z M66,46h4v4h-4z M78,46h4v4h-4z M86,46h4v4h-4z
+            M38,50h4v4h-4z M46,50h4v4h-4z M62,50h8v4h-8z M74,50h4v8h-4z M82,50h8v4h-8z
+            M6,58h8v4h-8z M18,58h4v4h-4z M26,58h8v4h-8z
+            M34,58h4v4h-4z M42,58h8v4h-8z M54,58h4v4h-4z M62,58h4v8h-4z M70,58h4v4h-4z M82,58h4v4h-4z M90,58h4v8h-4z
+            M6,62h4v4h-4z M14,62h8v4h-8z M26,62h4v4h-4z
+            M38,62h4v4h-4z M46,62h4v4h-4z M54,62h4v8h-4z M74,62h8v4h-8z M86,62h4v4h-4z
+            M34,66h4v8h-4z M42,66h8v4h-8z M58,66h4v4h-4z M66,66h4v8h-4z
+            M34,74h4v4h-4z M42,74h4v4h-4z M50,74h8v4h-8z M62,74h4v4h-4z
+            M38,78h8v4h-8z M54,78h4v4h-4z M62,78h8v4h-8z
+            M34,82h4v8h-4z M42,82h4v4h-4z M50,82h4v8h-4z M58,82h4v4h-4z M66,82h4v4h-4z
+            M38,86h4v4h-4z M46,86h4v4h-4z M54,86h8v4h-8z M66,86h4v4h-4z
+            M34,90h8v4h-8z M46,90h4v4h-4z M58,90h8v4h-8z
+        " />
+
+    <!-- CENTER EMBLEM: LankaQR / Emerald Accent Badge -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M43,43h14v14h-14z" />
+    <path
+        android:fillColor="#16A34A"
+        android:pathData="M45,45h10v10h-10z" />
+    <!-- Emblem Center Dot / Shield Symbol -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M48,48h4v4h-4z" />
+</vector>

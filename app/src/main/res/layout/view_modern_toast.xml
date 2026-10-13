@@ -8,10 +8,10 @@
     android:layout_marginBottom="36dp"
     android:layout_marginStart="20dp"
     android:layout_marginEnd="20dp"
-    app:cardBackgroundColor="@color/inverse_surface"
+    app:cardBackgroundColor="@color/toast_bg"
     app:cardCornerRadius="24dp"
     app:cardElevation="10dp"
-    app:strokeColor="#374151"
+    app:strokeColor="@color/toast_stroke"
     app:strokeWidth="1dp">
 
     <LinearLayout
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxWidth="280dp"
-            android:textColor="@color/white"
+            android:textColor="@color/toast_text"
             android:textSize="13sp"
             android:textStyle="bold" />
 

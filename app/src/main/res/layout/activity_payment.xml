@@ -230,15 +230,20 @@
 
                         <!-- OPTION 1: Credit / Debit Card -->
                         <LinearLayout
+                            android:id="@+id/layoutOptionCard"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:paddingVertical="4dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:gravity="center_vertical">
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:id="@+id/rbCard"
@@ -246,6 +251,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:checked="true"
+                                    android:clickable="false"
+                                    android:focusable="false"
                                     android:text="Credit / Debit Card"
                                     android:textColor="@color/on_surface"
                                     android:textSize="15sp"
@@ -272,37 +279,40 @@
                                 android:textColor="@color/on_surface_variant"
                                 android:textSize="12sp" />
 
-                            <!-- Card detail fields -->
+                            <!-- Card detail fields with comfortable spacing and outlined boxes -->
                             <LinearLayout
                                 android:id="@+id/llCardDetails"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical"
+                                android:layout_marginBottom="12dp"
                                 android:background="@drawable/bg_search_box"
                                 android:backgroundTint="@color/surface_container_low"
-                                android:padding="14dp"
-                                android:layout_marginBottom="12dp">
+                                android:orientation="vertical"
+                                android:padding="16dp">
 
                                 <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:hint="Card Number"
-                                    app:boxBackgroundMode="filled"
-                                    app:boxBackgroundColor="@color/surface_container_lowest"
+                                    app:boxCornerRadiusBottomEnd="14dp"
+                                    app:boxCornerRadiusBottomStart="14dp"
+                                    app:boxCornerRadiusTopEnd="14dp"
+                                    app:boxCornerRadiusTopStart="14dp"
                                     app:boxStrokeColor="@color/primary_container"
-                                    app:boxCornerRadiusTopStart="12dp"
-                                    app:boxCornerRadiusTopEnd="12dp"
-                                    app:boxCornerRadiusBottomStart="12dp"
-                                    app:boxCornerRadiusBottomEnd="12dp"
-                                    style="@style/Widget.Material3.TextInputLayout.FilledBox">
+                                    app:placeholderText="1234 5678 9012 3456"
+                                    app:startIconDrawable="@drawable/ic_credit_card"
+                                    app:startIconTint="@color/primary_container">
 
                                     <com.google.android.material.textfield.TextInputEditText
                                         android:id="@+id/etCardNumber"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:inputType="number"
+                                        android:letterSpacing="0.08"
                                         android:maxLength="19"
-                                        android:hint="•••• •••• •••• ••••"
+                                        android:paddingHorizontal="14dp"
+                                        android:paddingVertical="14dp"
                                         android:textColor="@color/on_surface"
                                         android:textSize="15sp" />
                                 </com.google.android.material.textfield.TextInputLayout>
@@ -310,82 +320,86 @@
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="12dp"
                                     android:orientation="horizontal">
 
                                     <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
-                                        android:layout_weight="1"
                                         android:layout_marginEnd="6dp"
+                                        android:layout_weight="1"
                                         android:hint="MM/YY"
-                                        app:boxBackgroundMode="filled"
-                                        app:boxBackgroundColor="@color/surface_container_lowest"
+                                        app:boxCornerRadiusBottomEnd="14dp"
+                                        app:boxCornerRadiusBottomStart="14dp"
+                                        app:boxCornerRadiusTopEnd="14dp"
+                                        app:boxCornerRadiusTopStart="14dp"
                                         app:boxStrokeColor="@color/primary_container"
-                                        app:boxCornerRadiusTopStart="12dp"
-                                        app:boxCornerRadiusTopEnd="12dp"
-                                        app:boxCornerRadiusBottomStart="12dp"
-                                        app:boxCornerRadiusBottomEnd="12dp"
-                                        style="@style/Widget.Material3.TextInputLayout.FilledBox">
+                                        app:placeholderText="MM/YY">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/etExpiryDate"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:inputType="date"
+                                            android:inputType="number"
+                                            android:letterSpacing="0.08"
                                             android:maxLength="5"
-                                            android:hint="MM/YY"
+                                            android:paddingHorizontal="14dp"
+                                            android:paddingVertical="14dp"
                                             android:textColor="@color/on_surface"
                                             android:textSize="15sp" />
                                     </com.google.android.material.textfield.TextInputLayout>
 
                                     <com.google.android.material.textfield.TextInputLayout
+                                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
-                                        android:layout_weight="1"
                                         android:layout_marginStart="6dp"
+                                        android:layout_weight="1"
                                         android:hint="CVV"
-                                        app:boxBackgroundMode="filled"
-                                        app:boxBackgroundColor="@color/surface_container_lowest"
+                                        app:boxCornerRadiusBottomEnd="14dp"
+                                        app:boxCornerRadiusBottomStart="14dp"
+                                        app:boxCornerRadiusTopEnd="14dp"
+                                        app:boxCornerRadiusTopStart="14dp"
                                         app:boxStrokeColor="@color/primary_container"
-                                        app:boxCornerRadiusTopStart="12dp"
-                                        app:boxCornerRadiusTopEnd="12dp"
-                                        app:boxCornerRadiusBottomStart="12dp"
-                                        app:boxCornerRadiusBottomEnd="12dp"
-                                        style="@style/Widget.Material3.TextInputLayout.FilledBox">
+                                        app:endIconMode="password_toggle"
+                                        app:placeholderText="123">
 
                                         <com.google.android.material.textfield.TextInputEditText
                                             android:id="@+id/etCVV"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:inputType="numberPassword"
+                                            android:letterSpacing="0.10"
                                             android:maxLength="4"
-                                            android:hint="•••"
+                                            android:paddingHorizontal="14dp"
+                                            android:paddingVertical="14dp"
                                             android:textColor="@color/on_surface"
                                             android:textSize="15sp" />
                                     </com.google.android.material.textfield.TextInputLayout>
                                 </LinearLayout>
 
                                 <com.google.android.material.textfield.TextInputLayout
+                                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="12dp"
                                     android:hint="Cardholder Name (Optional)"
-                                    app:boxBackgroundMode="filled"
-                                    app:boxBackgroundColor="@color/surface_container_lowest"
+                                    app:boxCornerRadiusBottomEnd="14dp"
+                                    app:boxCornerRadiusBottomStart="14dp"
+                                    app:boxCornerRadiusTopEnd="14dp"
+                                    app:boxCornerRadiusTopStart="14dp"
                                     app:boxStrokeColor="@color/primary_container"
-                                    app:boxCornerRadiusTopStart="12dp"
-                                    app:boxCornerRadiusTopEnd="12dp"
-                                    app:boxCornerRadiusBottomStart="12dp"
-                                    app:boxCornerRadiusBottomEnd="12dp"
-                                    style="@style/Widget.Material3.TextInputLayout.FilledBox">
+                                    app:placeholderText="e.g. John Doe">
 
                                     <com.google.android.material.textfield.TextInputEditText
                                         android:id="@+id/etCardholderName"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:inputType="textPersonName"
-                                        android:hint="e.g. John Doe"
+                                        android:letterSpacing="0.02"
+                                        android:paddingHorizontal="14dp"
+                                        android:paddingVertical="14dp"
                                         android:textColor="@color/on_surface"
                                         android:textSize="15sp" />
                                 </com.google.android.material.textfield.TextInputLayout>
@@ -394,7 +408,7 @@
                                     android:id="@+id/cbSaveCard"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="6dp"
+                                    android:layout_marginTop="8dp"
                                     android:checked="true"
                                     android:text="Save card securely for future commercial reorders"
                                     android:textColor="@color/on_surface_variant"
@@ -410,18 +424,45 @@
 
                         <!-- OPTION 2: Cash on Delivery / Pickup -->
                         <LinearLayout
+                            android:id="@+id/layoutOptionCash"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:paddingVertical="4dp">
 
-                            <RadioButton
-                                android:id="@+id/rbCash"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Cash on Delivery / Pickup"
-                                android:textColor="@color/on_surface"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbCash"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:text="Cash on Delivery / Pickup"
+                                    android:textColor="@color/on_surface"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_pill_location"
+                                    android:backgroundTint="@color/surface_container"
+                                    android:paddingHorizontal="8dp"
+                                    android:paddingVertical="2dp"
+                                    android:text="Flexible"
+                                    android:textColor="@color/on_surface_variant"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -440,141 +481,404 @@
 
                         <!-- OPTION 3: Direct Bank Deposit / Transfer -->
                         <LinearLayout
+                            android:id="@+id/layoutOptionBank"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:paddingVertical="4dp">
 
-                            <RadioButton
-                                android:id="@+id/rbBankTransfer"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Bank Deposit / Transfer"
-                                android:textColor="@color/on_surface"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbBankTransfer"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:text="Bank Deposit / Transfer"
+                                    android:textColor="@color/on_surface"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_pill_location"
+                                    android:backgroundTint="@color/surface_container"
+                                    android:paddingHorizontal="8dp"
+                                    android:paddingVertical="2dp"
+                                    android:text="Commercial Bank"
+                                    android:textColor="@color/on_surface_variant"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="32dp"
-                                android:text="Transfer to Commercial Bank A/C: 1002348590 (PrintXpress Works). Present receipt at collection."
+                                android:text="Direct deposit to PrintXpress account. Present transfer receipt."
                                 android:textColor="@color/on_surface_variant"
                                 android:textSize="12sp" />
+
+                            <!-- Bank Details Card (Shown when selected) -->
+                            <LinearLayout
+                                android:id="@+id/llBankDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/bg_search_box"
+                                android:backgroundTint="@color/surface_container_low"
+                                android:orientation="vertical"
+                                android:padding="14dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="PrintXpress Works Bank Details"
+                                    android:textColor="@color/on_surface"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Bank:"
+                                        android:textColor="@color/on_surface_variant"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Commercial Bank of Ceylon"
+                                        android:textColor="@color/on_surface"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Account No:"
+                                        android:textColor="@color/on_surface_variant"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="monospace"
+                                        android:text="1002348590"
+                                        android:textColor="@color/primary_container"
+                                        android:textSize="13sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Account Name:"
+                                        android:textColor="@color/on_surface_variant"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="PrintXpress Works (Pvt) Ltd"
+                                        android:textColor="@color/on_surface"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="100dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Branch:"
+                                        android:textColor="@color/on_surface_variant"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Colombo 03 Flagship"
+                                        android:textColor="@color/on_surface"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="8dp"
+                            android:background="@color/divider" />
+
+                        <!-- OPTION 4: Online Bank / QR (LankaQR) -->
+                        <LinearLayout
+                            android:id="@+id/layoutOptionQr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:orientation="vertical"
+                            android:paddingVertical="4dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rbOnlineQr"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:text="Online Bank / QR / LankaQR"
+                                    android:textColor="@color/on_surface"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_pill_accent"
+                                    android:paddingHorizontal="8dp"
+                                    android:paddingVertical="2dp"
+                                    android:text="LKR Instant"
+                                    android:textColor="@color/tertiary"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="32dp"
+                                android:text="Instant verification via Genie, FriMi, ComBank Q+, HNB SOLO &amp; LankaQR apps"
+                                android:textColor="@color/on_surface_variant"
+                                android:textSize="12sp" />
+
+                            <!-- QR Payment Preview Card (Shown when selected) -->
+                            <LinearLayout
+                                android:id="@+id/llQrDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/bg_search_box"
+                                android:backgroundTint="@color/surface_container_low"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:visibility="gone">
+
+                                <!-- LankaQR Official Style Header -->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bg_pill_accent"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:paddingHorizontal="10dp"
+                                    android:paddingVertical="4dp">
+
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:src="@drawable/ic_check_circle"
+                                        app:tint="@color/tertiary" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="6dp"
+                                        android:text="Central Bank of Sri Lanka Certified LankaQR"
+                                        android:textColor="@color/tertiary"
+                                        android:textSize="11sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <!-- Fake QR Code Card Container -->
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="14dp"
+                                    app:cardBackgroundColor="@color/white"
+                                    app:cardCornerRadius="16dp"
+                                    app:cardElevation="2dp"
+                                    app:strokeColor="@color/outline_variant"
+                                    app:strokeWidth="1dp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:orientation="vertical"
+                                        android:padding="14dp">
+
+                                        <ImageView
+                                            android:id="@+id/ivLankaQrCode"
+                                            android:layout_width="190dp"
+                                            android:layout_height="190dp"
+                                            android:contentDescription="LankaQR Payment Code"
+                                            android:src="@drawable/ic_fake_qr_code" />
+
+                                        <TextView
+                                            android:id="@+id/tvQrTotalAmount"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="8dp"
+                                            android:textColor="#111827"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            tools:text="Rs. 2,800.00" />
+
+                                        <TextView
+                                            android:id="@+id/tvQrReference"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="2dp"
+                                            android:fontFamily="monospace"
+                                            android:textColor="#6B7280"
+                                            android:textSize="11sp"
+                                            tools:text="REF: LK-PX-882941" />
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <!-- Merchant details -->
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="Merchant: PrintXpress Works (Pvt) Ltd • Terminal #01"
+                                    android:textColor="@color/on_surface"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <!-- Instructions -->
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:gravity="center"
+                                    android:text="Scan with Genie, FriMi, ComBank Q+, HNB SOLO, Sampath WePay or BOC. Tap 'Confirm Order' below after approving transaction."
+                                    android:textColor="@color/on_surface_variant"
+                                    android:textSize="11sp" />
+
+                                <!-- Supported apps row -->
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/bg_pill_location"
+                                        android:backgroundTint="@color/surface_container"
+                                        android:paddingHorizontal="8dp"
+                                        android:paddingVertical="3dp"
+                                        android:text="LankaQR"
+                                        android:textColor="@color/on_surface"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:background="@drawable/bg_pill_location"
+                                        android:backgroundTint="@color/surface_container"
+                                        android:paddingHorizontal="8dp"
+                                        android:paddingVertical="3dp"
+                                        android:text="Genie"
+                                        android:textColor="@color/on_surface"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:background="@drawable/bg_pill_location"
+                                        android:backgroundTint="@color/surface_container"
+                                        android:paddingHorizontal="8dp"
+                                        android:paddingVertical="3dp"
+                                        android:text="FriMi"
+                                        android:textColor="@color/on_surface"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:background="@drawable/bg_pill_location"
+                                        android:backgroundTint="@color/surface_container"
+                                        android:paddingHorizontal="8dp"
+                                        android:paddingVertical="3dp"
+                                        android:text="ComBank"
+                                        android:textColor="@color/on_surface"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:background="@drawable/bg_pill_location"
+                                        android:backgroundTint="@color/surface_container"
+                                        android:paddingHorizontal="8dp"
+                                        android:paddingVertical="3dp"
+                                        android:text="HNB SOLO"
+                                        android:textColor="@color/on_surface"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
                         </LinearLayout>
 
                     </RadioGroup>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Supported LankaQR / Digital Wallets Info Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="@color/surface_container_lowest"
-                app:strokeWidth="1dp"
-                app:strokeColor="@color/outline_variant">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="14dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Online Bank / QR / LankaQR"
-                            android:textColor="@color/on_surface"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bg_pill_accent"
-                            android:paddingHorizontal="8dp"
-                            android:paddingVertical="2dp"
-                            android:text="LKR Instant"
-                            android:textColor="@color/tertiary"
-                            android:textSize="10sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Instant verification via Genie, FriMi, and LankaQR mobile banking apps."
-                        android:textColor="@color/on_surface_variant"
-                        android:textSize="12sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bg_pill_location"
-                            android:backgroundTint="@color/surface_container"
-                            android:paddingHorizontal="8dp"
-                            android:paddingVertical="4dp"
-                            android:text="LankaQR"
-                            android:textColor="@color/on_surface"
-                            android:textSize="11sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="6dp"
-                            android:background="@drawable/bg_pill_location"
-                            android:backgroundTint="@color/surface_container"
-                            android:paddingHorizontal="8dp"
-                            android:paddingVertical="4dp"
-                            android:text="Genie"
-                            android:textColor="@color/on_surface"
-                            android:textSize="11sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="6dp"
-                            android:background="@drawable/bg_pill_location"
-                            android:backgroundTint="@color/surface_container"
-                            android:paddingHorizontal="8dp"
-                            android:paddingVertical="4dp"
-                            android:text="FriMi"
-                            android:textColor="@color/on_surface"
-                            android:textSize="11sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="6dp"
-                            android:background="@drawable/bg_pill_location"
-                            android:backgroundTint="@color/surface_container"
-                            android:paddingHorizontal="8dp"
-                            android:paddingVertical="4dp"
-                            android:text="ComBank"
-                            android:textColor="@color/on_surface"
-                            android:textSize="11sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

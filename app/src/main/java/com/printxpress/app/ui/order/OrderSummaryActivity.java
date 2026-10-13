@@ -2,7 +2,9 @@ package com.printxpress.app.ui.order;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +15,9 @@ import com.printxpress.app.data.local.entity.Address;
 import com.printxpress.app.data.local.entity.Promotion;
 import com.printxpress.app.data.local.model.CartItemWithProduct;
 import com.printxpress.app.databinding.ActivityOrderSummaryBinding;
+import com.printxpress.app.databinding.DialogSelectCouponBinding;
 import com.printxpress.app.ui.adapter.CartAdapter;
+import com.printxpress.app.ui.adapter.SelectCouponAdapter;
 import com.printxpress.app.util.PricingCalculator;
 import com.printxpress.app.util.SessionManager;
 import com.printxpress.app.viewModel.CartViewModel;
@@ -176,29 +180,41 @@ public class OrderSummaryActivity extends AppCompatActivity {
     }
 
     private void showAvailablePromosDialog() {
-        if (activePromotions == null || activePromotions.isEmpty()) {
-            com.printxpress.app.util.PrintXpressToast.info(this, "No active promo codes in database");
-            return;
-        }
-        String[] labels = new String[activePromotions.size()];
-        for (int i = 0; i < activePromotions.size(); i++) {
-            Promotion p = activePromotions.get(i);
-            labels[i] = String.format(Locale.US, "%s — %.0f%% OFF (Min: Rs. %,.2f)\n%s",
-                    p.getCode(), p.getDiscountPercentage(), p.getMinOrderAmount(), p.getTitle());
-        }
-        androidx.appcompat.app.AlertDialog dialog = new androidx.appcompat.app.AlertDialog.Builder(this)
-                .setTitle("Select Active Promo Code")
-                .setItems(labels, (d, which) -> {
-                    Promotion selected = activePromotions.get(which);
-                    binding.etPromoCode.setText(selected.getCode());
-                    applyPromoCodeFromDatabase();
-                })
-                .setNegativeButton("Cancel", null)
+        DialogSelectCouponBinding dialogBinding = DialogSelectCouponBinding.inflate(LayoutInflater.from(this));
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(dialogBinding.getRoot())
                 .create();
+
         if (dialog.getWindow() != null) {
-            dialog.getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_DIM_BEHIND);
-            dialog.getWindow().setDimAmount(0.65f);
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+            dialog.getWindow().setDimAmount(0.70f);
         }
+
+        dialogBinding.btnDialogClose.setOnClickListener(v -> dialog.dismiss());
+        dialogBinding.btnDialogCancel.setOnClickListener(v -> dialog.dismiss());
+
+        if (activePromotions == null || activePromotions.isEmpty()) {
+            dialogBinding.rvDialogCoupons.setVisibility(View.GONE);
+            dialogBinding.llEmptyState.setVisibility(View.VISIBLE);
+        } else {
+            dialogBinding.rvDialogCoupons.setVisibility(View.VISIBLE);
+            dialogBinding.llEmptyState.setVisibility(View.GONE);
+            dialogBinding.rvDialogCoupons.setLayoutManager(new LinearLayoutManager(this));
+
+            SelectCouponAdapter couponAdapter = new SelectCouponAdapter(
+                    activePromotions,
+                    cartSubtotal,
+                    selectedPromo -> {
+                        binding.etPromoCode.setText(selectedPromo.getCode());
+                        applyPromoCodeFromDatabase();
+                        dialog.dismiss();
+                    }
+            );
+            dialogBinding.rvDialogCoupons.setAdapter(couponAdapter);
+        }
+
         dialog.show();
     }
 

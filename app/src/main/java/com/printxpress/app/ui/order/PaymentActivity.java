@@ -24,6 +24,13 @@ public class PaymentActivity extends AppCompatActivity {
     private int userId;
     private int singleCartItemId = -1;
     
+    public static final int PAYMENT_MODE_CARD = 1;
+    public static final int PAYMENT_MODE_CASH = 2;
+    public static final int PAYMENT_MODE_BANK = 3;
+    public static final int PAYMENT_MODE_QR = 4;
+
+    private int selectedPaymentMode = PAYMENT_MODE_CARD;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,19 +56,29 @@ public class PaymentActivity extends AppCompatActivity {
         singleCartItemId = getIntent().getIntExtra("SINGLE_CART_ITEM_ID", -1);
         
         binding.tvTotalAmount.setText("Total to Pay: " + SessionManager.formatPrice(this, grandTotal));
+
+        if (binding.tvQrTotalAmount != null) {
+            binding.tvQrTotalAmount.setText(SessionManager.formatPrice(this, grandTotal));
+        }
+        if (binding.tvQrReference != null) {
+            long refNum = (System.currentTimeMillis() % 900000L) + 100000L;
+            binding.tvQrReference.setText("REF: LK-PX-" + refNum);
+        }
         
-        binding.rgPaymentMethod.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == R.id.rbCash) {
-                binding.llCardDetails.setVisibility(View.GONE);
-                binding.btnPay.setText("Confirm Order");
-            } else if (checkedId == R.id.rbBankTransfer) {
-                binding.llCardDetails.setVisibility(View.GONE);
-                binding.btnPay.setText("Confirm Order (Bank Transfer)");
-            } else {
-                binding.llCardDetails.setVisibility(View.VISIBLE);
-                binding.btnPay.setText("Pay Now");
-            }
-        });
+        // Single selection across all 4 payment options (guarantees mutual exclusion)
+        binding.layoutOptionCard.setOnClickListener(v -> selectPaymentMode(PAYMENT_MODE_CARD));
+        binding.rbCard.setOnClickListener(v -> selectPaymentMode(PAYMENT_MODE_CARD));
+
+        binding.layoutOptionCash.setOnClickListener(v -> selectPaymentMode(PAYMENT_MODE_CASH));
+        binding.rbCash.setOnClickListener(v -> selectPaymentMode(PAYMENT_MODE_CASH));
+
+        binding.layoutOptionBank.setOnClickListener(v -> selectPaymentMode(PAYMENT_MODE_BANK));
+        binding.rbBankTransfer.setOnClickListener(v -> selectPaymentMode(PAYMENT_MODE_BANK));
+
+        binding.layoutOptionQr.setOnClickListener(v -> selectPaymentMode(PAYMENT_MODE_QR));
+        binding.rbOnlineQr.setOnClickListener(v -> selectPaymentMode(PAYMENT_MODE_QR));
+
+        selectPaymentMode(PAYMENT_MODE_CARD);
         
         setupExpiryDateAutoFormatter();
         setupCardNumberAutoFormatter();
@@ -76,6 +93,39 @@ public class PaymentActivity extends AppCompatActivity {
         });
     }
 
+    private void selectPaymentMode(int mode) {
+        selectedPaymentMode = mode;
+
+        binding.rbCard.setChecked(mode == PAYMENT_MODE_CARD);
+        binding.rbCash.setChecked(mode == PAYMENT_MODE_CASH);
+        binding.rbBankTransfer.setChecked(mode == PAYMENT_MODE_BANK);
+        binding.rbOnlineQr.setChecked(mode == PAYMENT_MODE_QR);
+
+        binding.llCardDetails.setVisibility(mode == PAYMENT_MODE_CARD ? View.VISIBLE : View.GONE);
+        if (binding.llBankDetails != null) {
+            binding.llBankDetails.setVisibility(mode == PAYMENT_MODE_BANK ? View.VISIBLE : View.GONE);
+        }
+        if (binding.llQrDetails != null) {
+            binding.llQrDetails.setVisibility(mode == PAYMENT_MODE_QR ? View.VISIBLE : View.GONE);
+        }
+
+        switch (mode) {
+            case PAYMENT_MODE_CASH:
+                binding.btnPay.setText("Confirm Order (Cash on Delivery)  →");
+                break;
+            case PAYMENT_MODE_BANK:
+                binding.btnPay.setText("Confirm Order (Bank Transfer)  →");
+                break;
+            case PAYMENT_MODE_QR:
+                binding.btnPay.setText("Confirm Order (LankaQR Verified)  →");
+                break;
+            case PAYMENT_MODE_CARD:
+            default:
+                binding.btnPay.setText("Pay Now  →");
+                break;
+        }
+    }
+
     private void setLoadingState(boolean isLoading) {
         if (binding.pbPaymentLoading != null) {
             binding.pbPaymentLoading.setVisibility(isLoading ? View.VISIBLE : View.GONE);
@@ -84,14 +134,7 @@ public class PaymentActivity extends AppCompatActivity {
         if (isLoading) {
             binding.btnPay.setText("Processing Order...");
         } else {
-            int selectedId = binding.rgPaymentMethod.getCheckedRadioButtonId();
-            if (selectedId == R.id.rbCash) {
-                binding.btnPay.setText("Confirm Order");
-            } else if (selectedId == R.id.rbBankTransfer) {
-                binding.btnPay.setText("Confirm Order (Bank Transfer)");
-            } else {
-                binding.btnPay.setText("Pay Now");
-            }
+            selectPaymentMode(selectedPaymentMode);
         }
     }
 
@@ -186,16 +229,10 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     private boolean validatePayment() {
-        int selectedId = binding.rgPaymentMethod.getCheckedRadioButtonId();
-        if (selectedId == -1) {
-            com.printxpress.app.util.PrintXpressToast.info(this, "Please select a payment method");
-            return false;
-        }
-        
-        if (selectedId != R.id.rbCash && selectedId != R.id.rbBankTransfer) {
-            String rawCard = binding.etCardNumber.getText().toString().trim();
+        if (selectedPaymentMode == PAYMENT_MODE_CARD) {
+            String rawCard = binding.etCardNumber.getText() != null ? binding.etCardNumber.getText().toString().trim() : "";
             String cardNumber = rawCard.replaceAll("\\s+", "");
-            String cvv = binding.etCVV.getText().toString().trim();
+            String cvv = binding.etCVV.getText() != null ? binding.etCVV.getText().toString().trim() : "";
             
             if (!ValidationHelper.isValidCardNumber(cardNumber) || !ValidationHelper.isValidCardNumberLuhn(cardNumber)) {
                 binding.etCardNumber.setError("Enter a valid 16-digit card number (Luhn verified)");
@@ -209,7 +246,8 @@ public class PaymentActivity extends AppCompatActivity {
                 return false;
             }
 
-            String expiry = binding.etExpiryDate != null ? binding.etExpiryDate.getText().toString().trim() : "";
+            String expiry = binding.etExpiryDate != null && binding.etExpiryDate.getText() != null
+                    ? binding.etExpiryDate.getText().toString().trim() : "";
             if (!ValidationHelper.isValidExpiryDate(expiry)) {
                 binding.etExpiryDate.setError("Enter valid expiry (MM/YY)");
                 binding.etExpiryDate.requestFocus();
@@ -220,18 +258,26 @@ public class PaymentActivity extends AppCompatActivity {
     }
     
     private void processPaymentAndSaveOrder() {
-        int selectedId = binding.rgPaymentMethod.getCheckedRadioButtonId();
         String paymentMethod;
         String paymentStatus;
-        if (selectedId == R.id.rbCash) {
-            paymentMethod = "Cash on Delivery / Pickup";
-            paymentStatus = "PENDING";
-        } else if (selectedId == R.id.rbBankTransfer) {
-            paymentMethod = "Bank Deposit / Transfer";
-            paymentStatus = "PENDING_VERIFICATION";
-        } else {
-            paymentMethod = "Credit / Debit Card";
-            paymentStatus = "PAID";
+        switch (selectedPaymentMode) {
+            case PAYMENT_MODE_CASH:
+                paymentMethod = "Cash on Delivery / Pickup";
+                paymentStatus = "PENDING";
+                break;
+            case PAYMENT_MODE_BANK:
+                paymentMethod = "Bank Deposit / Transfer";
+                paymentStatus = "PENDING_VERIFICATION";
+                break;
+            case PAYMENT_MODE_QR:
+                paymentMethod = "Online Banking / LankaQR";
+                paymentStatus = "PAID";
+                break;
+            case PAYMENT_MODE_CARD:
+            default:
+                paymentMethod = "Credit / Debit Card";
+                paymentStatus = "PAID";
+                break;
         }
         
         orderViewModel.placeOrder(
