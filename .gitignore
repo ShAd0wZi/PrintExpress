@@ -3,15 +3,39 @@
 /local.properties
 local.properties
 /.idea
+.idea/
 .DS_Store
 build/
 */build/
 /build
 /captures
+captures/
 .externalNativeBuild
 .cxx
+.cxx/
 *.apk
 *.aab
+*.aar
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+proguard/
+*.log
+.navigation/
+*.jks
+*.keystore
+
+# OS Files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
 
 # Temp audit reports
 *_report.txt

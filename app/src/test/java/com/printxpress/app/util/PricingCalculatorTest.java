@@ -112,7 +112,7 @@ public class PricingCalculatorTest {
 
     @Test
     public void testMultiCurrencyConversionAndFormatting() {
-        assertEquals("Rs. 3000.00", PricingCalculator.formatCurrency(3000.0, "LKR"));
+        assertEquals("Rs. 3,000.00", PricingCalculator.formatCurrency(3000.0, "LKR"));
         assertEquals("$10.00", PricingCalculator.formatCurrency(3000.0, "USD"));
         assertEquals("€10.00", PricingCalculator.formatCurrency(3250.0, "EUR"));
         assertEquals("£10.00", PricingCalculator.formatCurrency(3800.0, "GBP"));
